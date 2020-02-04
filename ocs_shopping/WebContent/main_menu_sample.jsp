@@ -4,20 +4,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="webapp.css">
+
+<%
+String check;
+String pagePath = "log_in_sample.jsp";
+String session_check = (String)session.getAttribute("login");
+if(session_check != null){
+	check = "<h1>メインメニュー</h1>"
+			  + "<button class=\"log_out\" type=\"button\""
+			  +"onclick=\"location.href='./log_in_sample.jsp'\">ログアウト</button>";
+}else {
+	check = "<script>alert(\"不正な操作です。\")</script>"
+		  + "<script>location.href='./log_in_sample.jsp'</script>";
+}
+%>
+
 <title>メインメニュー</title>
-<link rel="stylesheet" href="./webapp.css">
 </head>
 <body>
-	<h1 class="title">メインメニュー</h1>
-	<div>
-		<button class="delete" type="button" >アカウント削除</button>
-		<button class="data_input" type="button" onclick="location.href='./data_entry.jsp'" >データ入力</button>
-		<button id="a" type="button" >新規作成</button>
-		<button id="b" type="button">b</button>
-		<button id="c" type="button">a</button>
-		<button id="d" type="button">c</button>
-		<button class="log_out" type="button" onclick="location.href='./log_in.jsp'">ログアウト</button>
-	</div>
+	<p><%= check %></p>
 </body>
 </html>
