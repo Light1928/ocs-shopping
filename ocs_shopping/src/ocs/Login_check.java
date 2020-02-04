@@ -57,19 +57,13 @@ public class Login_check extends HttpServlet {
 		if (id == null) {
 
 			System.out.println("id is null value.");
-
 			return false;
-
 		}
-
 		// lengthが0のとき
 
 		if (id.length() == 0) {
-
 			System.out.println("id is empty.");
-
 			return false;
-
 		}
 
 		if(password == null) {
