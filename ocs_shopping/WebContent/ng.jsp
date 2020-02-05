@@ -13,4 +13,4 @@
 		<button id="b" type="button" onclick="location.href='./ooptest.html'">ログアウト</button>
 	</div>
 </body>
-</html></html>
+</html>

@@ -60,39 +60,27 @@ public class Login_check extends HttpServlet {
 		response.sendRedirect(pagePath);
 	}
 	protected boolean user(String id, String password) {
-
 		// nullのとき
 
 		if (id == null) {
-
 			System.out.println("id is null value.");
 			return false;
 		}
 		// lengthが0のとき
-
 		if (id.length() == 0) {
 			System.out.println("id is empty.");
 			return false;
 		}
-
 		if(password == null) {
-
 			System.out.println("password is null value.");
-
 			return false;
-
 		}
-
 		if (password.length() == 0) {
-
 			System.out.println("password is empty.");
-
 			return false;
-
 		}
 
 		try {
-
 			String sql = "select * from  CUSTOMER  where User_ID = ? and Password = ?";
 			//MySQL用
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -102,7 +90,6 @@ public class Login_check extends HttpServlet {
 			PreparedStatement stmt = con.prepareStatement(sql);
 
 			stmt.setString(1, id);
-
 			stmt.setString(2, password);
 
 			ResultSet rs = stmt.executeQuery();
