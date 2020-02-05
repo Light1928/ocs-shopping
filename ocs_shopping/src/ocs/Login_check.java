@@ -6,13 +6,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 /**
  * Servlet implementation class Login_check
  */
@@ -47,17 +48,23 @@ public class Login_check extends HttpServlet {
 		String pagePath = "ng.jsp";
 		// check the user account.
 		if (user(id, password)) {
+
+			Ocs_Bean bean = new Ocs_Bean();
+			bean.setName(id);
 //			session.setAttribute("id", id);
 //			session.setAttribute("password", password);
-			session.setAttribute("login", "OK");
+			session.setAttribute("login", "login");
 			session.setMaxInactiveInterval(60);
+			request.setAttribute("login", bean);
+
 			pagePath = "main_menu_sample.jsp";
 		}
 		//フォワードでの遷移
-//		RequestDispatcher dispatch = request.getRequestDispatcher(pagePath);
-//		dispatch.forward(request, response);
+		ServletContext context = request.getServletContext();
+		RequestDispatcher dispatch = request.getRequestDispatcher(pagePath);
+		dispatch.forward(request, response);
 
-		response.sendRedirect(pagePath);
+//		response.sendRedirect(pagePath);
 	}
 	protected boolean user(String id, String password) {
 		// nullのとき
