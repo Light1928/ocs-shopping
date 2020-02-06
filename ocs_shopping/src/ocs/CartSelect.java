@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,7 +34,10 @@ public class CartSelect extends HttpServlet {
 		int Su = Integer.parseInt(request.getParameter("su"));
 		
 		try {
-			String sql = "select * from  CART  where Goods_ID= ? ";
+			String sql = "select Goods_Name,Price,Quantity, from  GOODS,GOODS_DETAILS,CART"
+					+ " where GOODS.Goods_ID=GOODS_DETAILES.Goods_ID "
+					+ " AND GOODS.Goods_ID=CART.Goods_ID"
+					+ " AND Goods_ID= ? ";
 			//MySQL用
 			Class.forName("org.mariadb.jdbc.Driver");
 			//学校用
@@ -45,7 +49,10 @@ public class CartSelect extends HttpServlet {
 			stmt.setInt(1, Sid);
 			stmt.setInt(2, Su);
 			
-			
+			ResultSet rs = stmt.executeQuery();	
+			if(rs.next()) {
+				
+			}
 		}catch(Exception ex) {
 			
 		}

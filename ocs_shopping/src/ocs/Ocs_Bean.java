@@ -24,7 +24,5 @@ public class Ocs_Bean implements Serializable{
 	
 	public
 	
-	public String getCart() {
-		
-	}
+	
 }
