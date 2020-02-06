@@ -48,7 +48,7 @@ public class CartAdd extends HttpServlet {
 			//家用
 			Connection con = DriverManager.getConnection(URL,USER_NAME,USER_PASS);
 			//学校用
-			PreparedStatement stmt = con.prepareStatement(sql);
+			PreparedStatement stmt = con.prepareStatement("");
 			
 			insert = stmt.executeUpdate("INSERT INTO CART"
 					+ " VALUES("+ Sid +", "+Su+")");
