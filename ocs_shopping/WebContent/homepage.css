@@ -1,0 +1,175 @@
+body {
+background-color:#f8f8f8;
+margin:0;
+padding:0;
+}
+#outer {
+background-color:#fff;
+margin:0 auto;
+width:800px;
+border-left: 1px solid #e5e5e5;
+border-right: 1px solid #e5e5e5;
+}
+#header {
+height:80px;
+}
+.header-inner {
+padding:15px 0 0 20px;
+font-size:12px;
+}
+.header-inner p{
+font-size:12px;
+}
+h1 {
+font-weight:bold;
+color:#357109;
+font-size:16px;
+margin:0;
+padding:7px 0 0 0;
+}
+h1 a{
+font-weight:bold;
+color:#357109;
+text-decoration:none;
+}
+h1 a:hover{
+text-decoration:underline;
+}
+h2 {
+font-size:16px;
+margin:0;
+padding:7px 0 7px 7px;
+background-color:#D6E7EE;
+}
+h2 a{
+font-weight:bold;
+text-decoration: none;
+color:#265699;
+}
+.global-navi {
+height:46px;
+background: url(bg.png) repeat-x #ffffff;
+}
+.global-inner {margin:0px auto 0px auto;
+width:640px;
+}
+.naviyoko {
+font:bold 10px verdana,sans-serif;
+margin:0; padding:0;
+    }
+.naviyoko { 
+margin:0 0 0 0;
+    }
+.naviyoko li {
+display:inline;
+margin:0px;
+    }
+p {
+margin:1em 0;
+font-size:13px;
+line-height:150%;
+}
+img {
+border:0;
+}
+a{
+color:#094a94;
+}
+#content {
+float:right;
+width:580px;
+}
+.inner {
+margin:0 20px 0 0;
+padding:0;
+}
+#left {
+color:#676767;
+font-size:13px;
+width:220px;
+float:left;
+}
+.left-title {
+margin:0 15px 0 20px;
+padding:7px 20px;
+font-weight:bold;
+background-color:#E3E3E3;
+color:#333;
+border-top: 1px solid #c7c7c7;
+border-right: 1px solid #c7c7c7;
+border-left: 1px solid #c7c7c7;
+}
+.link {
+margin:0 15px 7px 20px;
+padding:7px 8px 7px 13px;
+line-height:170%;
+border: 1px solid #c7c7c7;
+}
+.link a{
+color:#094a94;
+text-decoration:none;
+}
+.link a:hover{
+text-decoration:underline;
+}
+ul {
+margin: 0 0 0 1em;
+padding: 0;
+}
+li {
+list-style:disc; 
+}
+#footer {
+text-align:center;
+color:#666;
+font-size:12px;
+height:70px;
+padding-top:10px;
+clear:both;
+}
+blockquote{
+border:1px solid #ccc;
+padding:5px;
+margin:10px;
+}
+button.button{
+/* 文字サイズを1.4emに指定 */
+font-size: 1.4em;
+/* 文字の太さをboldに指定 */
+font-weight: bold;
+/* 縦方向に10px、
+* 横方向に30pxの余白を指定 */
+padding: 10px 30px;
+/* 文字色を白色に指定 */
+color: #fff;
+/* ボーダーをなくす */
+border-style: none;
+background-color: #24d;
+/* ボタンの影の指定
+* 影の横幅を2px
+* 縦長を2px
+* ぼかしを3px
+* 広がりを1px
+* 色を#666（グレー）に指定 */
+box-shadow: 2px 2px 3px 1px #666;
+-moz-box-shadow: 2px 2px 3px 1px #666;
+-webkit-box-shadow: 2px 2px 3px 1px #666;
+/* テキストの影の指定
+ 縦長を1px
+* ぼかしを2px
+* 色を#000（黒）に指定 */
+text-shadow: 1px 1px 2px #000;
+/* グラデーションの指定 */
+background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
+background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
+/* 角丸の指定 */
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+
+}
+button.button:hover {
+/* 透明度を20%に指定 */
+opacity: 0.8;
+}
+
