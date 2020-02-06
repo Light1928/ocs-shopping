@@ -2,14 +2,14 @@ package ocs;
 
 import java.io.Serializable;
 
-public class CartRecord_Bean  implements Serializable{
+public class CartRecordBean  implements Serializable{
 
 	private String goodsname;
 	private int price;
 	private int quantity;
 	
 	//constructor
-	public CartRecord_Bean() {
+	public CartRecordBean() {
 	}
 	public void setGoodsname(String goodsname) {
 		this.goodsname = goodsname;

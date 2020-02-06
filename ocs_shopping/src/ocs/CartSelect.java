@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/CartSelect")
 public class CartSelect extends HttpServlet {
@@ -25,7 +26,10 @@ public class CartSelect extends HttpServlet {
 	public static final String USER_NAME = "user_OCSshop";
 	public static final String USER_PASS = "OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
+	
+	CartInfoBean cartInfoBean = new CartInfoBean();
 
+	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -55,16 +59,24 @@ public class CartSelect extends HttpServlet {
 				gName = rs.getString("Goods_Name");
 				price = rs.getInt("Price");
 				quantity = rs.getInt("Quantity");
+		
+				CartRecordBean cartRecordBean = new CartRecordBean();
+				cartRecordBean.setGoodsname(gName);
+				cartRecordBean.setPrice(price);
+				cartRecordBean.setQuantity(quantity);
 				
-			Ocs_Bean setGoods = new Ocs_Bean();
-			setGoods.setGoodsname(gName);
-			setGoods.setPrice(price);
-			setGoods.setQuantity(quantity);
+				cartInfoBean.addCartlist(cartRecordBean);
+
 			
 			}
 		} catch (Exception ex) {
-
+			ex.printStackTrace();
 		}
+		HttpSession session = request.getSession();
+		session.setAttribute("cartInfoBean",cartInfoBean);
+		getServletContext().getRequestDispatcher("")
+		.forward(request, response);
+
 	}
 
 }
