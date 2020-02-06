@@ -7,8 +7,8 @@ public class Ocs_Bean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String goodsname;
-	private String price;
-	private String quantity;
+	private int price;
+	private int quantity;
 	//Constructor
 	public Ocs_Bean() {
 
@@ -22,7 +22,28 @@ public class Ocs_Bean implements Serializable{
 		return this.name;
 	}
 	
-	public
+	public void setGoodsname(String goodsname) {
+		this.goodsname = goodsname;
+	}
 	
+	public String getGoodsname() {
+		return this.goodsname;
+	}
 	
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public int getPrice() {
+		return this.price;
+	}
+	
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	public int getQuantity() {
+		return this.quantity;
+	}
 }
+
