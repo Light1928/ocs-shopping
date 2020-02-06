@@ -6,119 +6,111 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class Login_check
  */
+
 @WebServlet("/Login_check")
 public class Login_check extends HttpServlet {
-	public static final String HOST_NAME = "10.15.121.37:3306";
+	//家用
+	public static final String HOST_NAME = "localhost:3306";
 	public static final String DB_NAME   = "webapp2019_OCSshop";
-	public static final String USER_NAME = "user_OCSshop";
-	public static final String USER_PASS = "OCSshop";
+	public static final String  USER_NAME = "root";
+	public static final String USER_PASS = "";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
+	//学校用
+	//public static final String HOST_NAME = "10.15.121.37:3306";
+//	public static final String USER_NAME = "user_OCSshop";
+//	public static final String USER_PASS = "OCSshop";
+
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("userid");
 		String password = request.getParameter("password");
-		
+
+		HttpSession session = request.getSession();
+
 		System.out.println("ID \t\t:[" + id + "]");
 
 		System.out.println("PASSWORD \t:[" + password + "]");
-		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		}catch(Exception ex) {
-			ex.printStackTrace();
-		}
-	}
-	protected boolean user(String id, String pass) {
 
+		System.out.println(session.getId());
+
+		String pagePath = "ng.jsp";
+		// check the user account.
+		if (user(id, password)) {
+
+			Ocs_Bean bean = new Ocs_Bean();
+			bean.setName(id);
+//			session.setAttribute("id", id);
+//			session.setAttribute("password", password);
+			session.setAttribute("login", "login");
+			session.setMaxInactiveInterval(60);
+			request.setAttribute("login", bean);
+
+			pagePath = "main_menu_sample.jsp";
+		}
+		//フォワードでの遷移
+		ServletContext context = request.getServletContext();
+		RequestDispatcher dispatch = request.getRequestDispatcher(pagePath);
+		dispatch.forward(request, response);
+
+//		response.sendRedirect(pagePath);
+	}
+	protected boolean user(String id, String password) {
 		// nullのとき
 
 		if (id == null) {
-
 			System.out.println("id is null value.");
-
 			return false;
-
 		}
-
 		// lengthが0のとき
-
 		if (id.length() == 0) {
-
 			System.out.println("id is empty.");
-
 			return false;
-
 		}
-
-		if(pass == null) {
-
+		if(password == null) {
 			System.out.println("password is null value.");
-
 			return false;
-
 		}
-
-		if (pass.length() == 0) {
-
+		if (password.length() == 0) {
 			System.out.println("password is empty.");
-
 			return false;
-
 		}
 
 		try {
+			String sql = "select * from  CUSTOMER  where User_ID = ? and Password = ?";
+			//MySQL用
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//学校用
 
-			String sql = "select * from " + USER_NAME + " where id = ? and password = ?";
-
-		//	Class.forName("com.mysql.cj.jdbc.Driver");
-
-			Connection con = DriverManager.getConnection(URL, "USER_NAME","USER_PASS");
-
-
-
+			Connection con = DriverManager.getConnection(URL,"root","");
 			PreparedStatement stmt = con.prepareStatement(sql);
 
 			stmt.setString(1, id);
-
-			stmt.setString(2, pass);
+			stmt.setString(2, password);
 
 			ResultSet rs = stmt.executeQuery();
-
-
-
 			if (rs.next()) {
-
 				System.out.println("exist ID/PASSWORD pattern.");
-
 				return true;
-
 			} else {
-
 				System.out.println("doesn't exist ID/PASSWORD pattern.");
-
 				return false;
-
 			}
-
 		} catch (Exception ex) {
-
 			String msg = "ドライバのロードに失敗しました";
-
 			System.out.println(ex);
-
 			return false;
-
 		}
 	}
-
 }
