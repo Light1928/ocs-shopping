@@ -21,11 +21,11 @@
 		<div class="form-item">
 	<center>	<p class="formLabel">P W</p></center>
 		<center>	<input type="text" name="password" id="password" class="form-style" /></center>
-		<center><p><a href="#" ><small>パスワードを忘れた方</small></a></p></center>	
+		<center><p><a href="#" ><small>パスワードを忘れた方</small></a></p></center>
 		</div>
 		<div class="form-item">
 		<center><p class="pull-left"><a href="#"><small>新規作成</small></a></p></center>
-		<center><input type="submit" value="ログイン"></center>
+		<center><input type="submit" value="login"></center>
 		<div class="clear-fix"></div>
 		</div>
 </div>

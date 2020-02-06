@@ -6,8 +6,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,15 +19,15 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Login_check")
 public class Login_check extends HttpServlet {
 	//家用
-	//public static final String HOST_NAME = "localhost:3306";
-//	public static final String  USER_NAME = "root";
-//	public static final String USER_PASS = "";
+	public static final String HOST_NAME = "localhost:3306";
+	public static final String  USER_NAME = "root";
+	public static final String USER_PASS = "";
 	public static final String DB_NAME   = "webapp2019_OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	//学校用
-	public static final String HOST_NAME = "10.15.121.37:3306";
-	public static final String USER_NAME = "user_OCSshop";
-	public static final String USER_PASS = "OCSshop";
+//	public static final String HOST_NAME = "10.15.121.37:3306";
+//	public static final String USER_NAME = "user_OCSshop";
+//	public static final String USER_PASS = "OCSshop";
 
 
 	@Override
@@ -37,34 +35,35 @@ public class Login_check extends HttpServlet {
 		String id = request.getParameter("userid");
 		String password = request.getParameter("password");
 
-		HttpSession session = request.getSession();
+
 
 		System.out.println("ID \t\t:[" + id + "]");
 
 		System.out.println("PASSWORD \t:[" + password + "]");
 
-		System.out.println(session.getId());
+
 
 		String pagePath = "ng.jsp";
 		// check the user account.
 		if (user(id, password)) {
-
-			Ocs_Bean bean = new Ocs_Bean();
-			bean.setName(id);
+			HttpSession session = request.getSession(true);
+			System.out.println(session.getId());
+			//Ocs_Bean bean = new Ocs_Bean();
+			//bean.setName(id);
 //			session.setAttribute("id", id);
 //			session.setAttribute("password", password);
-			session.setAttribute("login", "login");
+			session.setAttribute("userid", id);
 			session.setMaxInactiveInterval(60);
-			request.setAttribute("login", bean);
+			//request.setAttribute("login", bean);
 
 			pagePath = "main_menu_sample.jsp";
 		}
 		//フォワードでの遷移
-		ServletContext context = request.getServletContext();
-		RequestDispatcher dispatch = request.getRequestDispatcher(pagePath);
-		dispatch.forward(request, response);
+//		ServletContext context = request.getServletContext();
+//		RequestDispatcher dispatch = request.getRequestDispatcher(pagePath);
+//		dispatch.forward(request, response);
 
-//		response.sendRedirect(pagePath);
+		response.sendRedirect(pagePath);
 	}
 	protected boolean user(String id, String password) {
 		// nullのとき
@@ -90,9 +89,9 @@ public class Login_check extends HttpServlet {
 		try {
 			String sql = "select * from  CUSTOMER  where User_ID = ? and Password = ?";
 			//MySQL用
-			//Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			//学校用
-			Class.forName("org.mariadb.jdbc.Driver");
+			//Class.forName("org.mariadb.jdbc.Driver");
 			//家用
 			//Connection con = DriverManager.getConnection(URL,"root","");
 			//学校用
