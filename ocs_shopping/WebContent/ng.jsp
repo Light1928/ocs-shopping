@@ -10,7 +10,7 @@
 <body>
 	<h1>認証に失敗しました。</h1>
 	<div>
-		<button id="b" type="button" onclick="location.href='./ooptest.html'">ログアウト</button>
+		<button id="b" type="button" onclick="location.href='./login.jsp'">戻る</button>
 	</div>
 </body>
 </html>
