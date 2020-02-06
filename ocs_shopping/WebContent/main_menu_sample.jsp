@@ -14,9 +14,10 @@ System.out.println(session_check);
 if(session_check != null){
 	check =   "<h1>メインメニュー</h1>"
 			+ "<button class=\"log_out\" type=\"button\""
-			+ "onclick=\"location.href='./log_in_sample.jsp'\">ログアウト</button>";
+			+ "onclick=\"location.href='./login.jsp'\">ログアウト</button>"
+			+ "<a href=\"login.jsp\"><img src=\"image/test.jpg\"  width=\"100\" height=\"100\"></a>";
 }else {
-	check = "<script>location.href='./log_in_sample.jsp'</script>";
+	check = "<script>location.href='./login.jsp'</script>";
 }
 %>
 <title>メインメニュー</title>
