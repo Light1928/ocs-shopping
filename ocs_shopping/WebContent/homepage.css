@@ -54,16 +54,11 @@ background: url(bg.png) repeat-x #ffffff;
 width:640px;
 }
 .naviyoko {
-font:bold 10px verdana,sans-serif;
-margin:0; padding:0;
+font:bold 8px verdana,sans-serif;
+margin-left: 20%;
+padding:0;
     }
-.naviyoko { 
-margin:0 0 0 0;
-    }
-.naviyoko li {
-display:inline;
-margin:0px;
-    }
+
 p {
 margin:1em 0;
 font-size:13px;
@@ -162,14 +157,6 @@ text-shadow: 1px 1px 2px #000;
 /* グラデーションの指定 */
 background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
 background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
-/* 角丸の指定 */
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
 
-}
-button.button:hover {
-/* 透明度を20%に指定 */
-opacity: 0.8;
 }
 

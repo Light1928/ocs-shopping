@@ -22,13 +22,11 @@
 <div class="global-navi">
 <div class="global-inner">
 <ul class="naviyoko">
-<li><a href="login.jsp"><img src="image/a1.png" alt="会社情報" width="100" height="46" border="0" /></a></li>
-<button class="button" type="button" onclick="location.href='./login.jsp'">遷移</button>
-<li><img src="image/a2.png" alt="IR情報" width="100" height="46" border="0" /></li>
-<li><img src="image/a3.png" alt="事業紹介" width="100" height="46" border="0" /></li>
-<li><img src="image/a4.png" alt="ニュース" width="100" height="46" border="0" /></li>
-<li><img src="image/a5.png" alt="アクセス" width="100" height="46" border="0" /></li>
-<li><img src="image/a6.png" alt="採用情報" width="100" height="46" border="0" /></li>
+<button class="button" type="button" onclick="location.href='./login.jsp'">HOME</button>
+<button class="button" type="button" onclick="location.href='./login.jsp'">利用説</button>
+<button class="button" type="button" onclick="location.href='./login.jsp'">注文</button>
+<button class="button" type="button" onclick="location.href='./login.jsp'">お問い合わせ</button>
+<button class="button" type="button" onclick="location.href='./login.jsp'">会社概要</button>
 </ul>
 </div></div>
 <div id="content">
