@@ -27,8 +27,12 @@ public class Account_entry extends HttpServlet {
 			
 			int a = Integer.parseInt(request.getParameter(""));
 			String b = request.getParameter("");
-			int c = Integer.parseInt(request.getParameter(""));
+			String c = request.getParameter("");
 			String d = request.getParameter("");
+			String e = request.getParameter("");
+			String f = request.getParameter("");
+			String g = request.getParameter("");
+			String h = request.getParameter("");
 			int ret = 0;
 			try {
 				Class.forName("org.mariadb.jdbc.Driver");
@@ -39,7 +43,7 @@ public class Account_entry extends HttpServlet {
 					"jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST",
 					USER_NAME, USER_PASS);
 					Statement stmt = conn.createStatement()){
-					 ret = stmt.executeUpdate("INSERT INTO kokyakutable"
+					 ret = stmt.executeUpdate("INSERT INTO CUSTOMER"
 							+" VALUES("+ a +",'"+ b +"',"+ c +" , '"+ d +"')");
 			}catch (Exception ex) {
 				ex.printStackTrace();
