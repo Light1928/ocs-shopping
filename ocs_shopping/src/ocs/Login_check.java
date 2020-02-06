@@ -22,9 +22,9 @@ import javax.servlet.http.HttpSession;
 public class Login_check extends HttpServlet {
 	//家用
 	//public static final String HOST_NAME = "localhost:3306";
-	public static final String DB_NAME   = "webapp2019_OCSshop";
 //	public static final String  USER_NAME = "root";
 //	public static final String USER_PASS = "";
+	public static final String DB_NAME   = "webapp2019_OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	//学校用
 	public static final String HOST_NAME = "10.15.121.37:3306";
