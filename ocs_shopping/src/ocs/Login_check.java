@@ -48,14 +48,7 @@ public class Login_check extends HttpServlet {
 		if (user(id, password)) {
 			HttpSession session = request.getSession(true);
 			System.out.println(session.getId());
-			//Ocs_Bean bean = new Ocs_Bean();
-			//bean.setName(id);
-//			session.setAttribute("id", id);
-//			session.setAttribute("password", password);
 			session.setAttribute("userid", id);
-			session.setMaxInactiveInterval(60);
-			//request.setAttribute("login", bean);
-
 			pagePath = "main_menu_sample.jsp";
 		}
 		//フォワードでの遷移

@@ -11,6 +11,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <!--  cssの反映-->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/homepage.css">
+
 <%
 String username;
 String check;
@@ -21,8 +22,7 @@ if(session != null){
 
 	username = (String)session.getAttribute("userid");
 	check =   "<h1>メインメニュー</h1>"
-			+ "<button class=\"log_out\" type=\"button\""
-			//+ "onclick=\"location.href='./login.jsp'\">ログアウト</button>"
+			+"<input type=\"submit\" value=\"logout\">"
 			+ "ようこそ、<b>" + username + "</b>さん<br>"
 			+ "<a href=\"login.jsp\"><img src=\"image/test.jpg\"  width=\"100\" height=\"100\"></a>";
 
@@ -36,7 +36,9 @@ if(session != null){
 <title>メインメニュー</title>
 </head>
 <body>
+<form action="Logout_Session" method="get">
 <p><%=check %></p>
 <button class="button" type="button" onclick="location.href='./login.jsp'">遷移</button>
+</form>
 </body>
 </html>
