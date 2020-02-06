@@ -43,7 +43,11 @@ public class CartAdd extends HttpServlet {
 			//MySQL用
 			Class.forName("org.mariadb.jdbc.Driver");
 			//学校用
+		
+			//Connection con = DriverManager.getConnection(URL,"root","");
+			//家用
 			Connection con = DriverManager.getConnection(URL,USER_NAME,USER_PASS);
+			//学校用
 			PreparedStatement stmt = con.prepareStatement(sql);
 			
 			insert = stmt.executeUpdate("INSERT INTO CART"
