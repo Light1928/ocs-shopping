@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1 id="title">OCSshop</h1>
-	<form action="Login_check" method="post">
+<!--  <form action="Login_check" method="post">-->
 		<table>
 			<tr>
 				<th><div id="id">ユーザID</div></th>

@@ -21,15 +21,15 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Login_check")
 public class Login_check extends HttpServlet {
 	//家用
-	public static final String HOST_NAME = "localhost:3306";
+	//public static final String HOST_NAME = "localhost:3306";
 	public static final String DB_NAME   = "webapp2019_OCSshop";
-	public static final String  USER_NAME = "root";
-	public static final String USER_PASS = "";
+//	public static final String  USER_NAME = "root";
+//	public static final String USER_PASS = "";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	//学校用
-	//public static final String HOST_NAME = "10.15.121.37:3306";
-//	public static final String USER_NAME = "user_OCSshop";
-//	public static final String USER_PASS = "OCSshop";
+	public static final String HOST_NAME = "10.15.121.37:3306";
+	public static final String USER_NAME = "user_OCSshop";
+	public static final String USER_PASS = "OCSshop";
 
 
 	@Override
@@ -90,10 +90,13 @@ public class Login_check extends HttpServlet {
 		try {
 			String sql = "select * from  CUSTOMER  where User_ID = ? and Password = ?";
 			//MySQL用
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			//Class.forName("com.mysql.cj.jdbc.Driver");
 			//学校用
-
-			Connection con = DriverManager.getConnection(URL,"root","");
+			Class.forName("org.mariadb.jdbc.Driver");
+			//家用
+			//Connection con = DriverManager.getConnection(URL,"root","");
+			//学校用
+			Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
 			PreparedStatement stmt = con.prepareStatement(sql);
 
 			stmt.setString(1, id);
