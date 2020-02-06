@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,6 +7,11 @@
 <meta charset="UTF-8">
 <title>ショッピングサイト</title>
 </head>
+<%
+System.out.println(session);
+
+session.setAttribute("name2",request.getParameter("name2"));
+%>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8">
 </script>
 <script type="text/javascript">
@@ -33,19 +39,21 @@ obj.value=v;
 <tr>
 <td>名前</td>
 <td>
-姓　<input autofocus required type="text" name="name1" size="8" maxlength="8">　　名　<input type="text" name="name2" size="8" maxlength="8"> </td>
+姓　<input autofocus required type="text" name="name1" size="8" maxlength="8">　　
+名　<input type="text" name="name2" size="8" maxlength="8"> </td>
 </tr>
 
 <tr>
 <td>フリガナ　</td>
 <td>
-<input required type="text" name="name3" size="16" maxlength="16"> 
+<input required type="text" name="name3" size="16" maxlength="16">
 </td>
 </tr>
 
 <tr>
 <td>郵便番号　</td>
-<td><input type="text" name="zip31" size="4" maxlength="3"> － <input type="text" name="zip32" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');"></td>
+<td><input type="text" name="zip31" size="4" maxlength="3"> － <input type="text" name="zip32" size="5" maxlength="4"
+ onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');"></td>
 </tr>
 
 <tr>
@@ -65,7 +73,9 @@ obj.value=v;
 <tr>
 <td>電話番号　</td>
 <td>
-<input  required type="text" value="　" onkeyup="suujinomi(this)" name="dennwabangou1" size="4" maxlength="4"> － <input type="text"　value="　" onkeyup="suujinomi(this)"　 name="dennwabangou2" size="4" maxlength="5"> － <input type="text" value="　" onkeyup="suujinomi(this)"　name="denwabangou3" size="4" maxlength="5"> </td>
+<input  required type="text" value="　" onkeyup="suujinomi(this)" name="dennwabangou1" size="4" maxlength="4">
+－ <input type="text"　value="　" onkeyup="suujinomi(this)"　 name="dennwabangou2" size="4" maxlength="5">
+－ <input type="text" value="　" onkeyup="suujinomi(this)"　name="denwabangou3" size="4" maxlength="5"> </td>
 </tr>
 
 <tr>
@@ -88,8 +98,11 @@ obj.value=v;
 
 
 </table>
-<div align="right">
-<input type="button" onclick="location.href='hviehrtg.jsp?bk=1'" value="送信" >
-
+<div align="center">
+<!--  <input type="button" onclick="location.href='hviehrtg.jsp?bk=1'" value="次へ" >-->
+<form method=POST  action=hviehrtg.jsp>
+<input type=submit value="次へ">
+</form>
 </body>
 </html>
+

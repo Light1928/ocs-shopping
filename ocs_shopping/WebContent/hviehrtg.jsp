@@ -1,27 +1,33 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<% String name2;
+
+System.out.println(session);
+name2 =  (String)session.getAttribute("name2");
+System.out.println(name2);%>
 <title>入力確認</title>
 </head>
 <body>
-<h1>名前</h1>
+<h2>名前<%= name2 %></h2>
 <br>
-<h1>郵便番号</h1>
+<h2>郵便番号</h2>
 <br>
-<h1>都道府県</h1>
+<h2>都道府県</h2>
 <br>
-<h1>国名</h1>
+<h2>国名</h2>
 <br>
-<h1>住所</h1>
+<h2>住所</h2>
 <br>
-<h1>電話番号</h1>
+<h2>電話番号</h2>
 <br>
-<h1>メールアドレス</h1>
+<h2>メールアドレス</h2>
 <br>
-<h1>パスワード</h1>
+<h2>パスワード</h2>
 <br>
 <center><input type="submit" value="以下の内容で登録" /></center>
 <br>
