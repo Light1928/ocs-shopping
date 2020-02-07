@@ -34,13 +34,12 @@ public class CartSelect extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		int Sid = Integer.parseInt(request.getParameter("sid"));
-		int Su = Integer.parseInt(request.getParameter("su"));
+		
 
 		try {
-			String sql = "select Goods_Name,Price,Quantity, from  GOODS,GOODS_DETAILS,CART"
-					+ " where GOODS.Goods_ID=GOODS_DETAILES.Goods_ID " + " AND GOODS.Goods_ID=CART.Goods_ID"
-					+ " AND exists (select count(*) from CART)  ";
+			String sql = "select Goods_Name,Price,Quantity, from  GOODS a JOIN CART b  ON a.Goods_ID = b.Goods_ID"
+							+ " JOIN GOODS_DETAILS c on a.Goods_ID = c.Goods_ID"
+							+ " WHERE Quantity >=1 ";
 			// MySQL用
 			Class.forName("org.mariadb.jdbc.Driver");
 			// 学校用
@@ -49,8 +48,7 @@ public class CartSelect extends HttpServlet {
 			Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
 			// 学校用
 			PreparedStatement stmt = con.prepareStatement(sql);
-			stmt.setInt(1, Sid);
-			stmt.setInt(2, Su);
+			
 
 			String gName;
 			int price, quantity;
