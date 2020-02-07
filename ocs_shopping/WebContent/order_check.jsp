@@ -13,6 +13,7 @@
 <option value=”kureka”>クレジットカード</option>
 <option value=”gen”>現金</option>
 </select>
+<center><img src="image/step1.png" width="700" height="119" ></center>
 <center>購入商品一覧
 <table border="3">
 <tr>

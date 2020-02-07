@@ -7,12 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center><h1>支払方法</h1>
+<form>
+<img src="image/step2.png" width="700" height="119" ><br>
 <select name="example">
 <option value="クレジットカード">クレジットカード</option>
 <option value="現金">現金</option>
 </select>
-<form>
-<p><input type="submit" value="次へ"></p>
+<p><input type="submit" value="次へ"></p></center>
 </form>
 </body>
 </html>
