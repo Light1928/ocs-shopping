@@ -40,7 +40,7 @@ public class CartSelect extends HttpServlet {
 		try {
 			String sql = "select Goods_Name,Price,Quantity, from  GOODS,GOODS_DETAILS,CART"
 					+ " where GOODS.Goods_ID=GOODS_DETAILES.Goods_ID " + " AND GOODS.Goods_ID=CART.Goods_ID"
-					+ " AND Goods_ID= ? ";
+					+ " AND exists (select count(*) from CART)  ";
 			// MySQL用
 			Class.forName("org.mariadb.jdbc.Driver");
 			// 学校用
