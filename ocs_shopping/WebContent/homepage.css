@@ -24,10 +24,12 @@ height:8s0px;
 padding:15px 0 0 20px;
 font-size:12px;
 }
+
 /*OCSshopのところのｐ*/
 .header-inner p{
 font-size:12px;
 }
+
 
 h1 {
 font-weight:bold;
@@ -109,6 +111,7 @@ border-right: 1px solid #c7c7c7;
 border-left: 1px solid #c7c7c7;
 }
 
+/*linkの部分を管理しやすくなる？*/
 .link {
 margin:0 15px 7px 20px;
 padding:7px 8px 7px 13px;
@@ -122,6 +125,8 @@ text-decoration:none;
 .link a:hover{
 text-decoration:underline;
 }
+
+/*検索下の部分*/
 ul {
 margin: 0 0 0 1em;
 padding: 0;
