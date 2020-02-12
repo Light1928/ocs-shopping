@@ -1,9 +1,6 @@
 package ocs;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,59 +16,23 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Account_entry")
 public class Account_entry extends HttpServlet {
 
-	public static final String HOST_NAME = "10.15.121.37:3306";
-	public static final String DB_NAME   = "webapp2019_184040";
-	public static final String USER_NAME = "user_184040";
-	public static final String USER_PASS = "184040";
-
 	@Override
-		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-		String pagePath = null;
-
-		String action = request.getParameter("action");
-			int a = Integer.parseInt(request.getParameter(""));
-			String b = request.getParameter("");
-			String c = request.getParameter("");
-			String d = request.getParameter("");
-			String e = request.getParameter("");
-			String f = request.getParameter("");
-			String g = request.getParameter("");
-			String h = request.getParameter("");
-			int ret = 0;
-			try {
-				Class.forName("org.mariadb.jdbc.Driver");
-			}catch(Exception ex) {
-				ex.printStackTrace();
-			}
-			try(Connection conn = DriverManager.getConnection(
-					"jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST",
-					USER_NAME, USER_PASS);
-					Statement stmt = conn.createStatement()){
-					 ret = stmt.executeUpdate("INSERT INTO CUSTOMER"
-							+" VALUES("+ a +",'"+ b +"',"+ c +" , '"+ d +"')");
-			}catch (Exception ex) {
-				ex.printStackTrace();
-			}
-
-		}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		request.setCharacterEncoding("UTF-8");
 		String user_id = request.getParameter("user_id");
         String name1 = request.getParameter("name1");
         String name2 = request.getParameter("name2");
         String name3 = request.getParameter("name3");
-        String postal_code1 = request.getParameter("postal_code1");
-        String postal_code2 = request.getParameter("postal_code2");
-        String prefecures = request.getParameter("prefecures");
-        String address = request.getParameter("address");
-        String phone_number = request.getParameter("phone_number");
+        String zip31 = request.getParameter("zip31");
+        String zip32 = request.getParameter("zip32");
+        String pref31 = request.getParameter("pref31");
+        String addr31 = request.getParameter("addr31");
+        String phone_number = request.getParameter("phoneNo");
+        String mail_address = request.getParameter("mail_address");
         String password = request.getParameter("password");
 
-        UserBean account_entry = new UserBean(user_id,name1,name2,name3,postal_code1,postal_code2,
-        		 prefecures,address,phone_number,password);
+        UserBean account_entry = new UserBean(user_id,name1,name2,name3,zip31,zip32,
+        		 pref31,addr31,phone_number,mail_address,password);
 
         HttpSession session = request.getSession();
         session.setAttribute("account_entry", account_entry);
@@ -80,5 +41,4 @@ public class Account_entry extends HttpServlet {
         dispatcher.forward(request, response);
 	}
 
-
-	}
+}

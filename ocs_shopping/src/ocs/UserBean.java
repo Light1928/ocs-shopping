@@ -11,7 +11,8 @@ public class UserBean implements Serializable {
     private String zip32;
     private String pref31;
     private String addr31;
-    private String phone_number;
+    private String phoneNo;
+    private String mail_address;
     private String password;
 
     public UserBean() {
@@ -19,7 +20,7 @@ public class UserBean implements Serializable {
     }
 
     public UserBean(String user_id, String name1,String name2,String name3,String zip31,String zip32,
-    		String pref31,String addr31,String phone_number,String password) {
+    		String pref31,String addr31,String phoneNo,String mail_address,String password) {
         this.user_id = user_id;
         this.name1 = name1;
         this.name2 = name2;
@@ -28,7 +29,8 @@ public class UserBean implements Serializable {
         this.zip32 = zip32;
         this.pref31 = pref31;
         this.addr31 = addr31;
-        this.phone_number = phone_number;
+        this.phoneNo = phoneNo;
+        this.mail_address = mail_address;
         this.password = password;
     }
 
@@ -64,48 +66,54 @@ public class UserBean implements Serializable {
     	this.name3 = name3;
     }
 
-    public String getPostal_code1() {
-    	return postal_code1;
+    public String getZip31() {
+    	return zip31;
     }
 
-    public void setPostal_code1(String postal_code1) {
-    	this.postal_code1 = postal_code1;
+    public void setPostal_code1(String zip31) {
+    	this.zip31 = zip31;
     }
 
-    public String getPostal_code2() {
-    	return postal_code2;
+    public String getZip32() {
+    	return zip32;
     }
 
-    public void setPostal_code2(String postal_code2) {
-    	this.postal_code2 = postal_code2;
+    public void setZip32(String zip32) {
+    	this.zip32 = zip32;
     }
 
-    public String getPrefecures() {
-    	return prefecures;
+    public String getPref31() {
+    	return pref31;
     }
 
-    public void setPrefecures(String prefecures) {
-    	this.prefecures = prefecures;
+    public void setPrefecures(String pref31) {
+    	this.pref31 = pref31;
     }
 
-    public String getAddress() {
-    	return address;
+    public String getAddr31() {
+    	return addr31;
     }
 
-    public void setAddress(String address) {
-    	this.address = address;
+    public void setAddr31(String addr31) {
+    	this.addr31 = addr31;
     }
 
-    public String getPhone_number() {
-    	return phone_number;
-    }
-
-
-    public void setPhone_number(String phone_number) {
-    	this.phone_number = phone_number;
+    public String getPhoneNo() {
+    	return phoneNo;
     }
 
 
+    public void setPhoneNo(String phoneNo) {
+    	this.phoneNo = phoneNo;
+    }
+
+    public String getMail_address() {
+    	return mail_address;
+    }
+
+    public void setMail_address(String mail_address) {
+    	this.mail_address = mail_address;
+    }
 
     public String getPassword() {
         return password;
