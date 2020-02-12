@@ -7,11 +7,7 @@
 <meta charset="UTF-8">
 <title>ショッピングサイト</title>
 </head>
-<%
-System.out.println(session);
 
-session.setAttribute("name2",request.getParameter("name2"));
-%>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8">
 </script>
 <script type="text/javascript">
@@ -30,11 +26,18 @@ obj.value=v;
 </script>
 
 <body>
+<form action="Account_entry" method="post">
 <div align="left">
 <h4>アカウント作成</h4>
 </div>
 <div align="center">
 <table class="table1">
+
+
+<tr>
+<td>ユーザID</td>
+<td>
+<input type="text" name='user_id' size="8" maxlength="8"></td>
 
 <tr>
 <td>名前</td>
@@ -73,22 +76,20 @@ obj.value=v;
 <tr>
 <td>電話番号　</td>
 <td>
-<input  required type="text" value="　" onkeyup="suujinomi(this)" name="dennwabangou1" size="4" maxlength="4">
-－ <input type="text"　value="　" onkeyup="suujinomi(this)"　 name="dennwabangou2" size="4" maxlength="5">
-－ <input type="text" value="　" onkeyup="suujinomi(this)"　name="denwabangou3" size="4" maxlength="5"> </td>
+<input  required type="text" value="　" onkeyup="suujinomi(this)" name="phone_number" size="11" maxlength="11"> </td>
 </tr>
 
 <tr>
 <td>メールアドレス　</td>
 <td>
-<input required pattern="^[0-9A-Za-z]+$">
+<input required pattern="^[0-9A-Za-z]+$" name="mail_address" maxlength="30">
 </td>
 </tr>
 
 <tr>
 <td>パスワード</td>
 <td>
-<input type='password' required pattern="^[0-9A-Za-z]+$" name="pw" size="13" maxlength="12">
+<input type='password' required pattern="^[0-9A-Za-z]+$" name="password" size="13" maxlength="12">
 </td>
 </tr>
 </div>
@@ -100,8 +101,8 @@ obj.value=v;
 </table>
 <div align="center">
 <!--  <input type="button" onclick="location.href='hviehrtg.jsp?bk=1'" value="次へ" >-->
-<form method=POST  action=hviehrtg.jsp>
-<input type=submit value="次へ">
+
+<input type=submit value="確認">
 </form>
 </body>
 </html>

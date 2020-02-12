@@ -1,6 +1,10 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="ocs.UserBean"%>
+    <%
+    UserBean bean = (UserBean) session.getAttribute("account_entry");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +17,9 @@ System.out.println(name2);%>
 <title>入力確認</title>
 </head>
 <body>
-<h2>名前<%= name2 %></h2>
+
+<p>ユーザID:<%=bean.getUser_id() %></p>
+<p>名前<%=bean.getName1()%> <%=bean.getName2() %></p>
 <br>
 <h2>郵便番号</h2>
 <br>
