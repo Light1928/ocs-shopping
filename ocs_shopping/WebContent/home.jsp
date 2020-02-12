@@ -12,17 +12,19 @@
 <link rel="stylesheet" href="homepage.css" type="text/css"/>
 </head>
 <body>
-<div id="outer">
-<div id="header">
+<div id="outer1">
+<div id="header1">
 <div class="header-inner">
 <h1>OCSshop</h1>
 <p>sample</p>
 </div>
 </div>
+</div>
+<div id="outer2">
 <div class="global-navi">
 <div class="global-inner">
 <ul class="naviyoko">
-<button class="button" type="button" onclick="location.href='./login.jsp'">HOME</button>
+<button class="button" type="button" onclick="location.href='./login.jsp'">ホーム</button>
 <button class="button" type="button" onclick="location.href='./login.jsp'">利用説</button>
 <button class="button" type="button" onclick="location.href='./login.jsp'">注文</button>
 <button class="button" type="button" onclick="location.href='./login.jsp'">お問い合わせ</button>
@@ -39,6 +41,7 @@
 <p>文章あれこれ</p>
 </div>
 </div>
+
 <div id="left">
 <div class="left-title">サイドバータイトル</div>
 <div class="link">
@@ -62,7 +65,6 @@
 </ul>
 </div>
 </div>
-<div id="footer">© 2010 あなたのホームページ</div>
 </div>
 </body>
 </html>

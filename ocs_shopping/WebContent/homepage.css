@@ -1,22 +1,32 @@
-/*全体の色など*/
+/*上と中央以外の部分*/
 body {
-background-color:#f8f8f8;
+background-color:#400040;
 margin:0;
 padding:0;
 }
 
-/*OCSshopの構成部分*/
-#outer {
-background-color:#f8f8f8;
+/*OCSshopの上の構成部分*/
+#outer1 {
+background-color:#0080ff;
 margin:0 auto;
-width:800px;
-border-left: 1px solid #f8f8f8;
-border-right: 1px solid #f8f8f8;
+width:1800px;
+border-left: 1px solid #357109;
+border-right: 1px solid #357109;
 }
 
-/*sampleなど上を構成している部分*/
-#header {
-height:8s0px;
+/*OCSshopの下の構成部分*/
+#outer2 {
+background-color:#f8f8f8;
+margin:0 auto;
+width:1000px;
+border-left: 1px solid #357109;
+border-right: 1px solid #357109;
+height: 1000px;
+}
+
+/*sampleより下を構成している部分*/
+#header1 {
+height:80px;
 }
 
 /*OCSshopのところ*/
@@ -143,7 +153,7 @@ font-size: 1.4em;
 font-weight: bold;
 /* 縦方向に10px、
 * 横方向に30pxの余白を指定 */
-padding: 10px 30px;
+padding: 10px 75px;
 /* 文字色を白色に指定 */
 color: #fff;
 /* ボーダーをなくす */
