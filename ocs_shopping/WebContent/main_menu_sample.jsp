@@ -5,12 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<!--  cssの反映-->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/homepage.css">
+<meta charset="UTF-8">
+<!--  cssの反映-->
 
 <%
 String username;

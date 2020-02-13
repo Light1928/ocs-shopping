@@ -22,7 +22,7 @@
 			<option value=”gen”>現金</option>
 		</select>
 		<center>
-			<img src="image/step1.png" width="700" height="119">
+			<img src="image/step3.png" width="700" height="119">
 		</center>
 		<center>
 			購入商品一覧

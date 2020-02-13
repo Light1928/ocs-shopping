@@ -2,12 +2,11 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="homepage.css" type="text/css" />
 <head>
 <meta charset="UTF-8">
 <title>ショッピングサイト</title>
-<link rel="stylesheet" href="homepage.css" type="text/css" />
 </head>
-
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8">
 </script>
 <script type="text/javascript">
