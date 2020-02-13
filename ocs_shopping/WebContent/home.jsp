@@ -25,7 +25,7 @@
 <div class="global-inner">
 <ul class="naviyoko">
 <button class="button" type="button" onclick="location.href='./login.jsp'">ホーム</button>
-<button class="button" type="button" onclick="location.href='./login.jsp'">利用説</button>
+<button class="button" type="button" onclick="location.href='./login.jsp'">利用説明</button>
 <button class="button" type="button" onclick="location.href='./login.jsp'">注文</button>
 <button class="button" type="button" onclick="location.href='./login.jsp'">お問い合わせ</button>
 <button class="button" type="button" onclick="location.href='./login.jsp'">会社概要</button>
@@ -43,25 +43,14 @@
 </div>
 
 <div id="left">
-<div class="left-title">サイドバータイトル</div>
+<div class="left-title">カテゴリー</div>
 <div class="link">
 <ul>
 <li>記事ページへのリンク</li>
 <li>記事ページへのリンク</li>
 <li>記事ページへのリンク</li>
 <li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
+
 </ul>
 </div>
 </div>
