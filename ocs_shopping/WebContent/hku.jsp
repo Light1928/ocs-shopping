@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-<img src="cartoon-t-shirts-005.jpg">
+<body><link rel="stylesheet" href="${pageContext.request.contextPath}/homepage.css">
+<img src="image/test.jpg"  width="100" height="100">
 数量
 <select name="example">
 <option value="1">1</option>
