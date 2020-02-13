@@ -16,15 +16,15 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/CartSelect")
 public class CartSelect extends HttpServlet {
 	// 家用
-	// public static final String HOST_NAME = "localhost:3306";
+	 public static final String HOST_NAME = "localhost:3306";
 	public static final String DB_NAME = "webapp2019_OCSshop";
-	// public static final String USER_NAME = "root";
-	// public static final String USER_PASS = "";
+	 public static final String USER_NAME = "root";
+	 public static final String USER_PASS = "";
 
 	// 学校用
-	public static final String HOST_NAME = "10.15.121.37:3306";
-	public static final String USER_NAME = "user_OCSshop";
-	public static final String USER_PASS = "OCSshop";
+//	public static final String HOST_NAME = "10.15.121.37:3306";
+//	public static final String USER_NAME = "user_OCSshop";
+//	public static final String USER_PASS = "OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	
 	CartInfoBean cartInfoBean = new CartInfoBean();
@@ -37,15 +37,21 @@ public class CartSelect extends HttpServlet {
 		
 
 		try {
-			String sql = "select Goods_Name,Price,Quantity, from  GOODS a JOIN CART b  ON a.Goods_ID = b.Goods_ID"
-							+ " JOIN GOODS_DETAILS c on a.Goods_ID = c.Goods_ID"
-							+ " WHERE Quantity >=1 ";
+//			String sql = "select Goods_Name,Price,Quantity, from  GOODS a JOIN CART b  ON a.Goods_ID = b.Goods_ID"
+//							+ " JOIN GOODS_DETAILS c on a.Goods_ID = c.Goods_ID"
+//							+ " WHERE Quantity >=1 ";
+			String sql = "SELECT Goods_Name,Price,Quantity" + 
+					"     FROM GOODS a JOIN CART b ON a.Goods_id = b.Goods_ID" + 
+					"     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" + 
+					"     WHERE Quantity >= 1";
+			
+			Class.forName("com.mysql.jdbc.Driver");
 			// MySQL用
-			Class.forName("org.mariadb.jdbc.Driver");
+			//Class.forName("org.mariadb.jdbc.Driver");
 			// 学校用
-			// Connection con = DriverManager.getConnection(URL,"root","");
+			 Connection con = DriverManager.getConnection(URL,"root","root");
 			// 家用
-			Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
+			//Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
 			// 学校用
 			PreparedStatement stmt = con.prepareStatement(sql);
 			
@@ -72,9 +78,10 @@ public class CartSelect extends HttpServlet {
 		}
 		HttpSession session = request.getSession();
 		session.setAttribute("cartInfoBean",cartInfoBean);
-		getServletContext().getRequestDispatcher("")
+		getServletContext().getRequestDispatcher("/cart_sample.jsp")
 		.forward(request, response);
-
+		
+		
 	}
 
 }
