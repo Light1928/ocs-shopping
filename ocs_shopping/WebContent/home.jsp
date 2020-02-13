@@ -33,7 +33,7 @@
 				<h2>商品一覧</h2>
 				<div style="position: absolute; top: 190px;">
 					<p>
-						<img src="image/test.jpg" width="100" height="100\" align="middle">
+						<a href= http://localhost:8566/ocs_shopping/Goods_select?Goods_ID=2><img src="image/test.jpg" width="100" height="100\" align="middle"></a>
 							文章あれこれ 
 					</p>
 				</div>
