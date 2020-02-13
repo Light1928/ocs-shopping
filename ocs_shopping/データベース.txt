@@ -51,9 +51,7 @@ INSERT INTO GOODS_DETAILS VALUES(2,'webapp答え','webappの練習問題の答�
 
 INSERT INTO GOODS_DETAILS VALUES(3,'国試答え','国試の練習問題の答え');
 
-INSERT INTO GOODS_DETAILS VALUES(1,'vba答え','VBAの練習問題の答え');
 
-INSERT INTO GOODS_DETAILS VALUES(2,'webapp答え','webappの練習問題の答え');
 
 INSERT INTO CART VALUES(1,7);
 
