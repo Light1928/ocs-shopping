@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ショッピングサイト</title>
+<link rel="stylesheet" href="homepage.css" type="text/css" />
 </head>
 
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8">
@@ -23,9 +24,17 @@ obj.value=v;
 }
 </script>
 <body>
+	<div id="outer1">
+		<div id="header1">
+			<div class="header-inner">
+				<h1>OCSshop</h1>
+			</div>
+		</div>
+	</div>
+	<div id="outer2">
 <form action="Account_entry" method="post">
 <div align="left">
-<h4>アカウント作成</h4>
+<a>アカウント作成</a>
 </div>
 <div align="center">
 <table class="table1">
@@ -93,6 +102,7 @@ obj.value=v;
 <!--  <input type="button" onclick="location.href='hviehrtg.jsp?bk=1'" value="次へ" >-->
 </div>
 <input type="submit" value="確認">
+</div>
 </form>
 </body>
 </html>
