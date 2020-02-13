@@ -24,7 +24,7 @@ if(session != null){
 	check =   "<h1>メインメニュー</h1>"
 			+"<input type=\"submit\" value=\"logout\">"
 			+ "ようこそ、<b>" + username + "</b>さん<br>"
-			+ "<a href=\"login.jsp\"><img src=\"image/test.jpg\"  width=\"100\" height=\"100\"></a>";
+			+ "<a href=\"http://localhost:8566/ocs_shopping/hku.jsp?Goods_ID=2\"><img src=\"image/test.jpg\"  width=\"100\" height=\"100\"></a>";
 
 }else {
 
