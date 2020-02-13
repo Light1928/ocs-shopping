@@ -32,7 +32,7 @@
 </div></div>
 <div id="content">
 <div class="inner">
-<h2>記事ページ見出し・大</h2>
+<h2>商品一覧</h2>
 <div style="position:absolute; top:190px;">
 <p>
 <img src="image/test.jpg"  width="100" height="100\" align="middle">
