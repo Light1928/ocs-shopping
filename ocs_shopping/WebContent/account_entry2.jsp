@@ -21,8 +21,7 @@
 	</div>
 	<div id="outer2">
 		<form action="Account_entry2" method="post">
-			<a>
-				ユーザID:<%=bean.getUser_id()%></a>
+			<a> ユーザID:<%=bean.getUser_id()%></a>
 			<p>
 				名前:<%=bean.getName1()%>
 				<%=bean.getName2()%></p>
