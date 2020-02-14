@@ -4,15 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="homepage.css" type="text/css" />
+
 <meta charset="UTF-8">
 <title>OCSshop</title>
+<link rel="stylesheet" href="homepage.css" type="text/css" />
 </head>
 <body>
 <div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<h1>OCSshop</h1>
+				<center><h1>OCSshop</h1></center>
 			</div>
 		</div>
 	</div>
@@ -23,7 +24,7 @@
 					<div class="logo"></div>
 					<div class="form-item">
 						<center>
-							<a class="formLabel">I D</a>
+							<p class="formLabel">I D</p>
 						</center>
 						<center>
 							<input type="text" name="userid" id="userid" class="form-style"
