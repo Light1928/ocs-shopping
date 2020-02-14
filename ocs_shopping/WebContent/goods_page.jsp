@@ -13,7 +13,7 @@
 </head>
 <body>
 
-
+<form action="CartAdd" method="post">
 <div id="outer1">
 <div id="header1">
 <div class="header-inner">
@@ -35,20 +35,21 @@
 <%String id = (String)request.getAttribute("details");
   String name = (String)request.getAttribute("name");
 %>
-<div style="position:absolute; top:250px; left:350px">
-<img src="image/test.jpg"  width="200" height="200" ><%=id %><%=name %>
-数量
-<select name="example">
+<div style="position:absolute; top:350px; left:700px">
+<img src="image/test.jpg"  width="200" height="200" ><%=name %><<br><%=id %>
+数量<br>
+<select name="quantity">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
 </select>
 個
+
 <p align="center"><input type="submit" value="カートに入れる"></p>
 </div>
 
-
-
+</div>
+</form>
 </body>
 </html>
