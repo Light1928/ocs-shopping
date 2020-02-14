@@ -18,15 +18,17 @@
 	<div id="outer2">
 		<!--  <div style="display:inline-block;background:#fcfcff; padding:15px; 
  border:1px solid #3b5998; border-radius:10px; word-break:break-all;">-->
-
-		<center>
-			<img src="image/step4.png" width="700" height="119">
-		</center>
 		<center>
 			<h1>注文手続きが完了しました。</h1>
 		</center>
+		<br>
 		<center>
-			<input type="submit" value="TOPへ戻る" />
+			<img src="image/step4.png" width="700" height="119">
+		</center>
+		<br>
+		<center>
+			<button class="button" type="button"
+				onclick="location.href='./home.jsp'">Topへ戻る</button>
 		</center>
 	</div>
 </body>

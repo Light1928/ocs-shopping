@@ -43,7 +43,7 @@
 			<center>
 				<input type="submit" value="入力画面に戻る。" />
 			</center>
+		</form>
 	</div>
-	</form>
 </body>
 </html>

@@ -41,6 +41,10 @@
 				<table class="table1">
 
 					<tr>
+					<h1>休場君の班の作ったメモ帳の機能とか使って名前とかだけ変更できやんかな？</h1>
+					<br>
+					<h1>無理なら頑張ってDB勉強して実装させる...たぶん</h1>
+					<tr>
 						<td>ユーザID</td>
 						<td><input autofocus required type="text" name='user_id'
 							size="8" maxlength="8"></td>

@@ -5,6 +5,17 @@ margin:0;
 padding:0;
 }
 
+/*内容量に応じた幅でブロックを中央寄せにしたいとき*/
+#outer{
+  text-align: center;
+}
+#inner{
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+}
+
+
 /*OCSshopの上の構成部分*/
 #outer1 {
 background-color:#80ff80;
@@ -18,7 +29,7 @@ border-right: 1px solid #80ff80;
 #outer2 {
 background-color:#ffffff;
 margin:0 auto;
-width:1000px;
+width:1075px;
 border-left: 1px solid #357109;
 border-right: 1px solid #357109;
 height: 1000px;
@@ -47,7 +58,7 @@ color:#357109;
 font-size:30px;
 margin:0;
 padding:7px 0 0 0;
-text-align: center;
+text-align: center
 }
 
 h1 a{
@@ -69,15 +80,6 @@ font-weight:bold;
 text-decoration: none;
 color:#265699;
 }
-
-/*ボタンの位置*/
-.naviyoko {
-font:bold 8px verdana,sans-serif;
-/*左寄せ*/
-text-align: left;
-/*高さ*/
-padding:10px;
-    }
 
 /*シンプルな黒*/
 p {
@@ -147,9 +149,9 @@ list-style:disc;
 }
 
 /*ボタン関係*/
-button.button{
-/* 文字サイズを1.4emに指定 */
-font-size: 1.4em;
+button{
+/*文字サイズ */
+font-size:12px;
 /* 文字の太さをboldに指定 */
 font-weight: bold;
 /* 縦方向に10px、
@@ -177,5 +179,4 @@ text-shadow: 1px 1px 2px #000;
 /* グラデーションの指定 */
 background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
 background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
-
 }

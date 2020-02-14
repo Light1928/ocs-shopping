@@ -24,9 +24,13 @@
 					<option value="クレジットカード">クレジットカード</option>
 					<option value="現金">現金</option>
 				</select>
-				<p>
-					<input type="submit" value="次へ">
-				</p>
+				<br><br>
+				<button class="button" type="button"
+				onclick="location.href='./order1.jsp'">戻る</button>
+				<!--ここservlet使うと思われる-->
+				<button class="button" type="button"
+				onclick="location.href='./order3.jsp'">次へ</button>
+			</form>
 		</center>
 		</form>
 	</div>

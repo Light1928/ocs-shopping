@@ -1,19 +1,18 @@
-<%@page session="false" %>
+<%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="stylesheet" href="homepage.css" type="text/css" />
 <meta charset="UTF-8">
 <title>OCSshop</title>
-<link rel="stylesheet" href="homepage.css" type="text/css" />
 </head>
 <body>
-<div id="outer1">
+	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<center><h1>OCSshop</h1></center>
+				<h1>OCSshop</h1>
 			</div>
 		</div>
 	</div>
@@ -24,7 +23,7 @@
 					<div class="logo"></div>
 					<div class="form-item">
 						<center>
-							<p class="formLabel">I D</p>
+							<a class="formLabel">I D</a>
 						</center>
 						<center>
 							<input type="text" name="userid" id="userid" class="form-style"
@@ -53,7 +52,7 @@
 					</div>
 				</div>
 			</div>
+		</form>
 	</div>
-	</form>
 </body>
 </html>

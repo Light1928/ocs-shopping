@@ -78,7 +78,7 @@ public class CartSelect extends HttpServlet {
 		}
 		HttpSession session = request.getSession();
 		session.setAttribute("cartInfoBean",cartInfoBean);
-		getServletContext().getRequestDispatcher("/cart_sample.jsp")
+		getServletContext().getRequestDispatcher("/order1.jsp")
 		.forward(request, response);
 		
 		
