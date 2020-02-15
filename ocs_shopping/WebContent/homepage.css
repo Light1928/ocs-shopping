@@ -148,6 +148,17 @@ li {
 list-style:disc;
 }
 
+/*css無効*/
+#clear_text{
+	color: initial;
+	font-size:initial;
+	font-weight:initial;
+	border-style:initial;
+	background-color:initial;
+	box-shadow:initial;
+	-moz-box-shadow:initial;
+}
+
 /*ボタン関係*/
 button{
 /*文字サイズ */
@@ -179,4 +190,6 @@ text-shadow: 1px 1px 2px #000;
 /* グラデーションの指定 */
 background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
 background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
+
+
 }

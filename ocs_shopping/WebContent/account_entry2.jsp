@@ -21,7 +21,7 @@
 	</div>
 	<div id="outer2">
 		<form action="Account_entry2" method="post">
-			<a> ユーザID:<%=bean.getUser_id()%></a>
+			<p> ユーザID:<%=bean.getUser_id()%></p>
 			<p>
 				名前:<%=bean.getName1()%>
 				<%=bean.getName2()%></p>
@@ -41,7 +41,9 @@
 			</center>
 			<br>
 			<center>
-				<input type="submit" value="入力画面に戻る。" />
+			<button class="a" type="button" id="clear_text"
+					onclick="location.href='./account_entry1.jsp'">入力画面に戻る</button>
+
 			</center>
 		</form>
 	</div>

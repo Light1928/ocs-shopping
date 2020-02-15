@@ -20,27 +20,28 @@ public class IdSerch {
 
 	public String IdSerchSql(String goods) {
 		String id = "" ;
-		try{	
+		try{
 		//MySQL用
 		Class.forName("com.mysql.jdbc.Driver");
 		//Class.forName("org.mariadb.jdbc.Driver");
 		//学校用
-		
-		Connection con = DriverManager.getConnection(URL,"root","root");
+
+		Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
 		//家用
 		//Connection con = DriverManager.getConnection(URL,USER_NAME,USER_PASS);
-		
+
 		String selectSql ="SELECT Goods_ID FROM GOODS_DETAILS WHERE Goods_Name = '"+goods+"'";
 		PreparedStatement stmt1 = con.prepareStatement(selectSql);
-						
-		
+
+
 		ResultSet rs = stmt1.executeQuery();
 		while(rs.next()) {
 		id = rs.getString("Goods_ID");
+		System.out.println(id);
 		}
 		rs.close();
 		stmt1.close();
-		
+
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

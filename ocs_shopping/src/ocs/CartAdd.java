@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 
@@ -22,50 +23,57 @@ public class CartAdd extends HttpServlet {
 		public static final String DB_NAME   = "webapp2019_OCSshop";
 		public static final String  USER_NAME = "root";
 		public static final String USER_PASS = "";
-		
+
 		//学校用
 //		public static final String HOST_NAME = "10.15.121.37:3306";
 //		public static final String USER_NAME = "user_OCSshop";
 //		public static final String USER_PASS = "OCSshop";
 		private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
-		
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-		String Goods = (request.getParameter("goods"));
-		int Su = Integer.parseInt(request.getParameter("su"));
-		
-		System.out.println(Goods);
-		System.out.println(Su);
-		
+
+		HttpSession session = request.getSession();
+		String goods_name = (String)session.getAttribute("switch");
+		//ゲットできた
+		System.out.println(goods_name);
+
+		//ここでエラーを吐いてしまう
+		int goods_id = (int) session.getAttribute("goods_id");
+		System.out.println(goods_id);
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
+		System.out.println(quantity);
+
+
 		IdSerch is = new IdSerch();
-		int id = Integer.parseInt(is.IdSerchSql(Goods));
+		int id = Integer.parseInt(is.IdSerchSql(goods_name));
 		try{
-			String sql = "INSERT INTO CART VALUES("+id+","+Su+")";
-			
-			
+			String sql = "INSERT INTO CART VALUES("+id+","+quantity+")";
+
+
 			//MySQL用
 			Class.forName("com.mysql.jdbc.Driver");
 			//Class.forName("org.mariadb.jdbc.Driver");
 			//学校用
-		
-			Connection con = DriverManager.getConnection(URL,"root","root");
+
+			Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
 			//家用
 			//Connection con = DriverManager.getConnection(URL,USER_NAME,USER_PASS);
-			
-	
+
+
 			PreparedStatement stmt = con.prepareStatement(sql);
-			
+
 			stmt.executeUpdate();
-			
+
 			System.out.println("成功");
-			
+
+			response.sendRedirect("order1.jsp");
 		}catch(Exception ex) {
+			System.out.println("失敗");
 			ex.printStackTrace();
 		}
-		
-		
+
+
 	}
 
 }

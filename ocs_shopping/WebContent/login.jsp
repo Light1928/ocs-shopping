@@ -35,7 +35,7 @@
 							<p class="formLabel">P W</p>
 						</center>
 						<center>
-							<input type="text" name="password" id="password"
+							<input type="password" name="password" id="password"
 								class="form-style" />
 						</center>
 					</div>

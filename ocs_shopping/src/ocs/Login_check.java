@@ -22,8 +22,10 @@ public class Login_check extends HttpServlet {
 	private static final String DB_NAME   = "webapp2019_OCSshop";
 	//家用
 	private  static final String HOST_NAME = "localhost:3306";
-	public  static final String  USER_NAME = "root";
-	public  static final String USER_PASS = "";
+	private  static final String  USER_NAME = "root";
+	private  static final String USER_PASS = "";
+	public String username;
+
 	//学校用
 //	private static final String HOST_NAME = "10.15.121.37:3306";
 //	private static final String USER_NAME = "user_OCSshop";
@@ -42,12 +44,9 @@ public class Login_check extends HttpServlet {
 			HttpSession session = request.getSession(true);
 			System.out.println(session.getId());
 			session.setAttribute("userid", id);
-			pagePath = "main_menu_sample.jsp";
+			session.setAttribute("username", this.username);
+			pagePath = "home.jsp";
 		}
-		//フォワードでの遷移
-//		ServletContext context = request.getServletContext();
-//		RequestDispatcher dispatch = request.getRequestDispatcher(pagePath);
-//		dispatch.forward(request, response);
 
 		response.sendRedirect(pagePath);
 	}
@@ -73,13 +72,11 @@ public class Login_check extends HttpServlet {
 		}
 
 		try {
-			String sql = "select * from  CUSTOMER  where User_ID = ? and Password = ?";
+			String sql = "SELECT * FROM CUSTOMER WHERE User_ID = ? AND Password = ?";
 			//MySQL用
 			//Class.forName("com.mysql.cj.jdbc.Driver");
 			//学校用
 			Class.forName("org.mariadb.jdbc.Driver");
-			//家用
-			//Connection con = DriverManager.getConnection(URL,"root","");
 			//学校用
 			Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
 			PreparedStatement stmt = con.prepareStatement(sql);
@@ -89,6 +86,7 @@ public class Login_check extends HttpServlet {
 
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()) {
+				 this.username = rs.getString("Name");
 				System.out.println("exist ID/PASSWORD pattern.");
 				return true;
 			} else {
