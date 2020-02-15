@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -67,7 +69,10 @@ public class CartAdd extends HttpServlet {
 
 			System.out.println("成功");
 
-			response.sendRedirect("order1.jsp");
+			//response.sendRedirect("CartSelect");
+			ServletContext context = request.getServletContext();
+			RequestDispatcher rd = context.getRequestDispatcher("/CartSelect");
+			rd.forward(request, response);
 		}catch(Exception ex) {
 			System.out.println("失敗");
 			ex.printStackTrace();

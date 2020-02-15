@@ -26,35 +26,33 @@ public class CartSelect extends HttpServlet {
 //	public static final String USER_NAME = "user_OCSshop";
 //	public static final String USER_PASS = "OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
-	
+
 	CartInfoBean cartInfoBean = new CartInfoBean();
 
-	
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
+
 
 		try {
 //			String sql = "select Goods_Name,Price,Quantity, from  GOODS a JOIN CART b  ON a.Goods_ID = b.Goods_ID"
 //							+ " JOIN GOODS_DETAILS c on a.Goods_ID = c.Goods_ID"
 //							+ " WHERE Quantity >=1 ";
-			String sql = "SELECT Goods_Name,Price,Quantity" + 
-					"     FROM GOODS a JOIN CART b ON a.Goods_id = b.Goods_ID" + 
-					"     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" + 
+			String sql = "SELECT Goods_Name,Price,Quantity" +
+					"     FROM GOODS a JOIN CART b ON a.Goods_id = b.Goods_ID" +
+					"     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" +
 					"     WHERE Quantity >= 1";
-			
+
 			Class.forName("com.mysql.jdbc.Driver");
 			// MySQL用
 			//Class.forName("org.mariadb.jdbc.Driver");
-			// 学校用
-			 Connection con = DriverManager.getConnection(URL,"root","root");
 			// 家用
-			//Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
+			Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
 			// 学校用
 			PreparedStatement stmt = con.prepareStatement(sql);
-			
+
 
 			String gName;
 			int price, quantity;
@@ -63,25 +61,25 @@ public class CartSelect extends HttpServlet {
 				gName = rs.getString("Goods_Name");
 				price = rs.getInt("Price");
 				quantity = rs.getInt("Quantity");
-		
+
 				CartRecordBean cartRecordBean = new CartRecordBean();
 				cartRecordBean.setGoodsname(gName);
 				cartRecordBean.setPrice(price);
 				cartRecordBean.setQuantity(quantity);
-				
+
 				cartInfoBean.addCartlist(cartRecordBean);
 
-			
+
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		session.setAttribute("cartInfoBean",cartInfoBean);
 		getServletContext().getRequestDispatcher("/order1.jsp")
 		.forward(request, response);
-		
-		
+
+
 	}
 
 }

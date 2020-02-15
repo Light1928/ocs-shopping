@@ -6,7 +6,7 @@
 <head>
 <link rel="stylesheet" href="homepage.css" type="text/css" />
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>カート一覧</title>
 </head>
 <body>
 
@@ -26,11 +26,11 @@
 		<center>
 			購入商品一覧
 			<table border="3">
-				<tr>	
+				<tr>
 					<th width="200">商品名</th>
 					<th width="200">値段</th>
 					<th width="200">数量</th>
-					
+
 					<%
 					ArrayList<CartRecordBean> crtRecordArray = cartInfoBean.getCartlistArray();
 									for (CartRecordBean rcd : crtRecordArray) {
@@ -38,7 +38,7 @@
 														+ rcd.getQuantity() + "</td></tr>");
 									}
 					%>
-				
+
 				</tr>
 			</table>
 			<br>
