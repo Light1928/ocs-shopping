@@ -37,9 +37,7 @@ public class CartSelect extends HttpServlet {
 
 
 		try {
-//			String sql = "select Goods_Name,Price,Quantity, from  GOODS a JOIN CART b  ON a.Goods_ID = b.Goods_ID"
-//							+ " JOIN GOODS_DETAILS c on a.Goods_ID = c.Goods_ID"
-//							+ " WHERE Quantity >=1 ";
+
 			String sql = "SELECT Goods_Name,Price,Quantity" +
 					"     FROM GOODS a JOIN CART b ON a.Goods_id = b.Goods_ID" +
 					"     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" +

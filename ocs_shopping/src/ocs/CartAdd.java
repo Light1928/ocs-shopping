@@ -40,17 +40,18 @@ public class CartAdd extends HttpServlet {
 		//ゲットできた
 		System.out.println(goods_name);
 
-		//ここでエラーを吐いてしまう
+		String user_id = (String)session.getAttribute("userid");
+		System.out.println(user_id);
 		int goods_id = (int) session.getAttribute("goods_id");
 		System.out.println(goods_id);
 		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		System.out.println(quantity);
 
 
-		IdSerch is = new IdSerch();
-		int id = Integer.parseInt(is.IdSerchSql(goods_name));
+//		IdSerch is = new IdSerch();
+//		int id = Integer.parseInt(is.IdSerchSql(goods_name));
 		try{
-			String sql = "INSERT INTO CART VALUES("+id+","+quantity+")";
+			String sql = "INSERT INTO CART VALUES("+user_id+goods_id+","+quantity+")";
 
 
 			//MySQL用
