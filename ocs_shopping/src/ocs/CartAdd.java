@@ -73,7 +73,7 @@ public class CartAdd extends HttpServlet {
 			request.setAttribute("count",count);
 //			response.sendRedirect("Goods_details");
 			ServletContext context = request.getServletContext();
-			RequestDispatcher rd = context.getRequestDispatcher("/CartSelect");
+			RequestDispatcher rd = context.getRequestDispatcher("/home.jsp");
 			rd.forward(request, response);
 		}catch(Exception ex) {
 			System.out.println("失敗");
