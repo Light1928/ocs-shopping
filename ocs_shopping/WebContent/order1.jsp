@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8" import="ocs.CartRecordBean"
 	import="java.util.ArrayList"%>
 	<%	String name=null;
-		 session = request.getSession(false);
+		session= request.getSession(false);
 	if(session==null){
 		response.sendRedirect("login.jsp");
 		}else{

@@ -32,6 +32,8 @@ public class CartAdd extends HttpServlet {
 //		public static final String USER_PASS = "OCSshop";
 		private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 
+		CartInfoBean cartInfoBean = new CartInfoBean();
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -67,14 +69,20 @@ public class CartAdd extends HttpServlet {
 			//件数取得
 			int count = stmt.executeUpdate();
 			if(count == 1) {
-
-			}
 			System.out.println("成功");
+			CartRecordBean cartRecordBean = new CartRecordBean();
+			cartRecordBean.setGoodsname(goods_name);
+			//途中
+			//cartRecordBean.setPrice(goods_name);
+			cartRecordBean.setQuantity(quantity);
+
+			cartInfoBean.addCartlist(cartRecordBean);
 			request.setAttribute("count",count);
 //			response.sendRedirect("Goods_details");
 			ServletContext context = request.getServletContext();
 			RequestDispatcher rd = context.getRequestDispatcher("/home.jsp");
 			rd.forward(request, response);
+			}
 		}catch(Exception ex) {
 			System.out.println("失敗");
 			ex.printStackTrace();
