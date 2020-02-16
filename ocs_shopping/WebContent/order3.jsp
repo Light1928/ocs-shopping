@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="ocs.CartRecordBean"
 	import="java.util.ArrayList"%>
+	<%	String name=null;
+		 session = request.getSession(false);
+	if(session==null){
+		response.sendRedirect("login.jsp");
+		}else{
+		 name = (String)session.getAttribute("username");}
+	%>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="homepage.css" type="text/css" />

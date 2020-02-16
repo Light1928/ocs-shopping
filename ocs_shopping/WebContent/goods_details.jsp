@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.sql.*"%>
-<%
-	String name = (String) request.getAttribute("name");
+<%	String name = null;
+ session = request.getSession(false);
+if(session==null){
+response.sendRedirect("login.jsp");
+}else{
+ name = (String)session.getAttribute("username");}
+
+	String goods_name = (String) request.getAttribute("name");
 	int goods_id = (int) request.getAttribute("goods_id");
 	String details = (String) request.getAttribute("details");
 %>

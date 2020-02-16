@@ -1,6 +1,14 @@
 <%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+	<!-- セッションが残っていたらトップサイトに強制的に遷移 -->
+	<%
+		HttpSession session = request.getSession(false);
+	if(session!=null){
+		response.sendRedirect("home.jsp");
+	}
+	%>
 <!DOCTYPE html>
 <html>
 <head>

@@ -34,7 +34,7 @@ public class Goods_select extends HttpServlet {
 
 	int id = Integer.parseInt(request.getParameter("Goods_ID"));
 	String details = null;
-	String name = null;
+	String goods_name = null;
 	try {
 		String sql = "SELECT * FROM GOODS_DETAILS WHERE Goods_ID = ?";
 		//MySQL用
@@ -48,9 +48,9 @@ public class Goods_select extends HttpServlet {
 		stmt.setInt(1, id);;
 		ResultSet rs = stmt.executeQuery();
 		if (rs.next()) {
-			name = rs.getString("Goods_Name");
+			goods_name = rs.getString("Goods_Name");
 			details = rs.getString("Goods_Text");
-			System.out.println(name);
+			System.out.println(goods_name);
 		} else {
 			System.out.println("doesn't exist ID/PASSWORD pattern.");
 
@@ -61,7 +61,7 @@ public class Goods_select extends HttpServlet {
 
 	}
 	request.setAttribute("goods_id",id);
-	request.setAttribute("name",name);
+	request.setAttribute("goods_name",goods_name);
 	request.setAttribute("details", details);
 	RequestDispatcher dispatch = request.getRequestDispatcher("goods_details.jsp");
 	dispatch.forward(request, response);

@@ -45,6 +45,8 @@ public class Login_check extends HttpServlet {
 			System.out.println(session.getId());
 			session.setAttribute("userid", id);
 			session.setAttribute("username", this.username);
+			//セッション有効時間１時間
+			session.setMaxInactiveInterval(3600);
 			pagePath = "home.jsp";
 		}
 
