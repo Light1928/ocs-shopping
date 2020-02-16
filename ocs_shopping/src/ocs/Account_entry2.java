@@ -19,7 +19,9 @@ public class Account_entry2 extends HttpServlet {
 	//家用
 	private static final String HOST_NAME = "localhost:3306";
 	private static final String  USER_NAME = "root";
-	private static final String USER_PASS = "root";
+	private static final String USER_PASS = "";
+	//青木用
+	//private static final String USER_PASS = "root";
 	//学校用
 //	private static final String HOST_NAME = "10.15.121.37:3306";
 //	private static final String USER_NAME = "user_OCSshop";
