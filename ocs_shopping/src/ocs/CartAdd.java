@@ -51,7 +51,7 @@ public class CartAdd extends HttpServlet {
 //		IdSerch is = new IdSerch();
 //		int id = Integer.parseInt(is.IdSerchSql(goods_name));
 		try{
-			String sql = "INSERT INTO CART VALUES("+user_id+goods_id+","+quantity+")";
+			String sql = "INSERT INTO CART VALUES("+user_id+","+goods_id+","+quantity+")";
 
 
 			//MySQL用
