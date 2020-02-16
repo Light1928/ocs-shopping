@@ -87,8 +87,6 @@ public class CartAdd extends HttpServlet {
 			System.out.println("失敗");
 			ex.printStackTrace();
 		}
-
-
 	}
 
 }
