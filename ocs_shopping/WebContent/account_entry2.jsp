@@ -2,7 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="ocs.UserBean"%>
 <%
-	UserBean bean = (UserBean) session.getAttribute("account_entry");
+UserBean bean = (UserBean) session.getAttribute("account_entry");
+
+/* if(session!=null){
+	response.sendRedirect("/login.jsp");
+} */
 %>
 <!DOCTYPE html>
 <html>

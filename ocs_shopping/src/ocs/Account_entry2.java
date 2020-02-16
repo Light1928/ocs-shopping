@@ -61,6 +61,7 @@ public class Account_entry2 extends HttpServlet {
 	ret = stmt.executeUpdate();
 	System.out.println(ret);
 	if(ret==1) {
+		session.invalidate();
 		response.sendRedirect("entry_complete.jsp");
 	}else {
 		System.out.println("error");
