@@ -1,15 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.sql.*"%>
-<%	String name = null;
+<%	String username = null;
+	String goods_name = null;
+	int goods_id= 0;
+	String details = null;
  session = request.getSession(false);
 if(session==null){
 response.sendRedirect("login.jsp");
 }else{
- name = (String)session.getAttribute("username");}
-
-	String goods_name = (String) request.getAttribute("name");
-	int goods_id = (int) request.getAttribute("goods_id");
-	String details = (String) request.getAttribute("details");
+	try{
+ username = (String)session.getAttribute("username");
+	 goods_name = (String) request.getAttribute("goods_name");
+	System.out.println(goods_name);
+	 goods_id = (int) request.getAttribute("goods_id");
+	 details = (String) request.getAttribute("details");
+	}catch(Exception ex){
+		response.sendRedirect("home.jsp");
+	}
+}
 %>
 <!DOCTYPE html>
 <html>
@@ -19,7 +27,7 @@ response.sendRedirect("login.jsp");
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta charset="UTF-8">
 <link rel="stylesheet" href="homepage.css" type="text/css" />
-<title><%=name%></title>
+<title><%=goods_name%></title>
 </head>
 <body>
 	<form action="CartAdd" method="post">
@@ -55,20 +63,20 @@ response.sendRedirect("login.jsp");
 					switch (id) {
 					case 1:
 						document.write('<img src="image/test.jpg" width="200" height="200">')
-				<%session.setAttribute("switch", name);
+				<%session.setAttribute("switch", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 2:
 						document.write('<img src="image/test2.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", name);
+				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 					}
 				</script>
 
 				<div class="content">
-					<div clsss="content_item"><%=name%></div>
+					<div clsss="content_item"><%=goods_name%></div>
 					<div class="content_item"><%=details%></div>
 				</div>
 

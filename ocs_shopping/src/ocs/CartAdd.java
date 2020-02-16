@@ -64,12 +64,14 @@ public class CartAdd extends HttpServlet {
 
 
 			PreparedStatement stmt = con.prepareStatement(sql);
+			//件数取得
+			int count = stmt.executeUpdate();
+			if(count == 1) {
 
-			stmt.executeUpdate();
-
+			}
 			System.out.println("成功");
-
-			//response.sendRedirect("CartSelect");
+			request.setAttribute("count",count);
+//			response.sendRedirect("Goods_details");
 			ServletContext context = request.getServletContext();
 			RequestDispatcher rd = context.getRequestDispatcher("/CartSelect");
 			rd.forward(request, response);
