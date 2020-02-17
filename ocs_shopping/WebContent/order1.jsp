@@ -1,9 +1,8 @@
-<%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="ocs.CartRecordBean"
 	import="java.util.ArrayList"%>
 	<%	String name=null;
-		HttpSession session= request.getSession(false);
+		 session= request.getSession(false);
 	if(session==null){
 		response.sendRedirect("login.jsp");
 		}else{
