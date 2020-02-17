@@ -6,12 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>認証失敗</title>
-<link rel="stylesheet" href="ooptest.css">
+<link rel="stylesheet" href="homepage.css" type="text/css" />
 </head>
 <body>
-	<h1>認証に失敗しました。</h1>
+<div id="outer1">
+		<div id="header1">
+			<div class="header-inner">
+				<h1>OCSshop</h1>
+			</div>
+		</div>
+	</div>
+	<center><p>認証に失敗しました。</p></center>
 	<div>
-		<button id="b" type="button" onclick="location.href='./login.jsp'">戻る</button>
+		<center><button id="b" type="button" onclick="location.href='./login.jsp'">戻る</button></center>
 	</div>
 </body>
 </html>
