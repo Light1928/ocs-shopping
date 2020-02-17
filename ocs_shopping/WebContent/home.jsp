@@ -25,11 +25,12 @@
 		<div id="header1">
 			<div class="header-inner">
 				<h1>OCSshop</h1>
-				<font size="4" color="#000000">　　ようこそ、<%=name%>さん</font></td>
 			</div>
 		</div>
 	</div>
 	<div id="outer2">
+	<br>
+	<font size="4" color="#000000">　　ようこそ、<%=name%>さん</font></td>
 		<div id="outer">
 			<div id="inner">
 				<button class="button" type="button"

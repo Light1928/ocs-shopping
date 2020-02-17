@@ -25,11 +25,12 @@
 		<div id="header1">
 			<div class="header-inner">
 				<h1>OCSshop</h1>
-				<font size="4" color="#000000">　　ようこそ、<%=name%>さん</font></td>
 			</div>
 		</div>
 	</div>
 	<div id="outer2">
+	<br>
+	<font size="4" color="#000000">　　ようこそ、<%=name%>さん</font></td>
 		<div id="outer">
 			<div id="inner">
 				<button class="button" type="button"
@@ -49,14 +50,14 @@
 			<div class="inner">
 				<h2>商品一覧</h2>
 				<div style="position: absolute; top: 190px;">
-					<p><a href=/ocs_shopping/Goods_select?Goods_ID=1>
+					<p><a href=/ocs_shopping/Goods_select?Goods_ID=3>
 					<img src="image/book1.jpg" width="100" height="100\" align="middle"></a>
 						基本情報技術者試験参考書
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 310px;">
-					<p><a href=/ocs_shopping/Goods_select?Goods_ID=2>
+					<p><a href=/ocs_shopping/Goods_select?Goods_ID=4>
 						<img src="image/book2.jpg" width="100" height="100\" align="middle"></a>
 						応用情報技術者試験参考書
 					</p>

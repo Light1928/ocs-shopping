@@ -39,6 +39,7 @@ response.sendRedirect("login.jsp");
 			</div>
 		</div>
 		<div id="outer2">
+		<br>
 			<div id="outer">
 				<div id="inner">
 					<button class="button" type="button"
@@ -72,7 +73,44 @@ response.sendRedirect("login.jsp");
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
+					
+					case 3:
+						document.write('<img src="image/book1.jpg" width="200" height="200">')
+				<%session.setAttribute("switch_black", goods_name);
+				  session.setAttribute("goods_id", goods_id);%>
+					break;
+					
+					case 4:
+						document.write('<img src="image/book2.jpg" width="200" height="200">')
+				<%session.setAttribute("switch_black", goods_name);
+				  session.setAttribute("goods_id", goods_id);%>
+					break;
+					
+					case 5:
+						document.write('<img src="image/electronics1.jpg" width="200" height="200">')
+				<%session.setAttribute("switch_black", goods_name);
+				  session.setAttribute("goods_id", goods_id);%>
+					break;
+					
+					case 6:
+						document.write('<img src="image/electronics2.jpg" width="200" height="200">')
+				<%session.setAttribute("switch_black", goods_name);
+				  session.setAttribute("goods_id", goods_id);%>
+					break;
+					
+					case 7:
+						document.write('<img src="image/game1.jpg" width="200" height="200">')
+				<%session.setAttribute("switch_black", goods_name);
+				  session.setAttribute("goods_id", goods_id);%>
+					break;
+					
+					case 8:
+						document.write('<img src="image/game2.jpg" width="200" height="200">')
+				<%session.setAttribute("switch_black", goods_name);
+				  session.setAttribute("goods_id", goods_id);%>
+					break;
 					}
+			
 				</script>
 
 				<div class="content">
