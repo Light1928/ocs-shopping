@@ -12,9 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-/**
- * Servlet implementation class Login_check
- */
+
+
+//login.jspから入力したデータからユーザー認証を行う
+
 
 @WebServlet("/Login_check")
 public class Login_check extends HttpServlet {

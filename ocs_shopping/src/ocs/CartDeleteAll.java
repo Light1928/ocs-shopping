@@ -15,9 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class CartDeleteAll
- */
+
+//注文確定後CART TABLEの中身（ログインユーザ）を削除
+
+
 @WebServlet("/CartDeleteAll")
 public class CartDeleteAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;

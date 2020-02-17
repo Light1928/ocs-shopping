@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Category_select
- */
+//カテゴリー別のページを生成するためのデータ抽出
+
+
 @WebServlet("/Category_select")
 public class Category_select extends HttpServlet {
 	private  final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";

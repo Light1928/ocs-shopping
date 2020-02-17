@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+//CART TABLEにUser_ID、Goods_ID,Quantityを登録
+
 
 @WebServlet("/CartAdd")
 public class CartAdd extends HttpServlet {

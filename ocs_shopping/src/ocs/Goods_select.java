@@ -13,9 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Goods_select
- */
+
+//商品画像をクリック後商品詳細ページを生成する際のデータ抽出
+
+
 @WebServlet("/Goods_select")
 public class Goods_select extends HttpServlet {
 	private  final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";

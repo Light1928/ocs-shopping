@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
+//Beanに格納されているデータをDBのCUSTOMER TABLEに登録
+
+
 @WebServlet("/Account_entry2")
 public class Account_entry2 extends HttpServlet {
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
@@ -51,23 +55,23 @@ public class Account_entry2 extends HttpServlet {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		//学校用
 		//Class.forName("org.mariadb.jdbc.Driver");
-	Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
-	PreparedStatement stmt = con.prepareStatement(sql);
-	stmt.setString(1,user_id);
-	stmt.setString(2,mail_address);
-	stmt.setString(3,password);
-	stmt.setString(4,phoneNo);
-	stmt.setString(5,zip31+zip32);
-	stmt.setString(6,addr31);
-	stmt.setString(7,name1+name2);
-	ret = stmt.executeUpdate();
-	System.out.println(ret);
-	if(ret==1) {
-		session.invalidate();
-		response.sendRedirect("entry_complete.jsp");
-	}else {
-		System.out.println("error");
-	}
+		Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
+		PreparedStatement stmt = con.prepareStatement(sql);
+		stmt.setString(1,user_id);
+		stmt.setString(2,mail_address);
+		stmt.setString(3,password);
+		stmt.setString(4,phoneNo);
+		stmt.setString(5,zip31+zip32);
+		stmt.setString(6,addr31);
+		stmt.setString(7,name1+name2);
+		ret = stmt.executeUpdate();
+		System.out.println(ret);
+		if(ret==1) {
+			session.invalidate();
+			response.sendRedirect("entry_complete.jsp");
+		}else {
+			System.out.println("error");
+		}
 		}catch(Exception ex) {
 			String msg = "ドライバのロードに失敗しました";
 			System.out.println(ex);

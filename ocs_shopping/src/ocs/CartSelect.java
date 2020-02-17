@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 @WebServlet("/CartSelect")
 public class CartSelect extends HttpServlet {
 	// 家用
@@ -26,15 +27,11 @@ public class CartSelect extends HttpServlet {
 //	public static final String USER_NAME = "user_OCSshop";
 //	public static final String USER_PASS = "OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
-
 	CartInfoBean cartInfoBean = new CartInfoBean();
-
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-
 
 		try {
 
@@ -51,7 +48,6 @@ public class CartSelect extends HttpServlet {
 			// 学校用
 			PreparedStatement stmt = con.prepareStatement(sql);
 
-
 			String gName;
 			int price, quantity;
 			ResultSet rs = stmt.executeQuery();
@@ -67,7 +63,6 @@ public class CartSelect extends HttpServlet {
 
 				cartInfoBean.addCartlist(cartRecordBean);
 
-
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -76,7 +71,6 @@ public class CartSelect extends HttpServlet {
 		session.setAttribute("cartInfoBean",cartInfoBean);
 		getServletContext().getRequestDispatcher("/order1.jsp")
 		.forward(request, response);
-
 
 	}
 
