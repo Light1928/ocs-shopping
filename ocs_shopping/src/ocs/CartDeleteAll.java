@@ -23,10 +23,10 @@ public class CartDeleteAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	//家用
-			public static final String HOST_NAME = "localhost:3306";
-			public static final String DB_NAME   = "webapp2019_OCSshop";
-			public static final String  USER_NAME = "root";
-			public static final String USER_PASS = "";
+			private static final String HOST_NAME = "localhost:3306";
+			private static final String DB_NAME   = "webapp2019_OCSshop";
+			private static final String  USER_NAME = "root";
+			private static final String USER_PASS = "";
 
 			//学校用
 //			public static final String HOST_NAME = "10.15.121.37:3306";

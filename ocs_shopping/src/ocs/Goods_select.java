@@ -22,8 +22,8 @@ public class Goods_select extends HttpServlet {
 	private static final String DB_NAME   = "webapp2019_OCSshop";
 	//家用
 	private  static final String HOST_NAME = "localhost:3306";
-	public  static final String  USER_NAME = "root";
-	public  static final String USER_PASS = "";
+	private  static final String  USER_NAME = "root";
+	private  static final String USER_PASS = "";
 	//学校用
 //	private static final String HOST_NAME = "10.15.121.37:3306";
 //	private static final String USER_NAME = "user_OCSshop";

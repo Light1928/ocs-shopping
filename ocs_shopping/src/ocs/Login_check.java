@@ -26,7 +26,7 @@ public class Login_check extends HttpServlet {
 	private  static final String USER_PASS = "";
 	//青木用
 	//private static final String USER_PASS = "root";
-	public String username;
+	private String username;
 
 	//学校用
 //	private static final String HOST_NAME = "10.15.121.37:3306";
