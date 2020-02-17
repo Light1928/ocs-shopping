@@ -50,53 +50,16 @@
 				<h2>商品一覧</h2>
 				<div style="position: absolute; top: 190px;">
 					<p><a href=/ocs_shopping/Goods_select?Goods_ID=1>
-					<img src="image/test.jpg" width="100" height="100\" align="middle"></a>
-						文章あれこれ
+					<img src="image/electronics1.jpg" width="100" height="100\" align="middle"></a>
+						掃除機
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 310px;">
 					<p><a href=/ocs_shopping/Goods_select?Goods_ID=2>
-						<img src="image/test2.jpg" width="100" height="100\" align="middle"></a>
-						文章あれこれ
+						<img src="image/electronics2.jpg" width="100" height="100\" align="middle"></a>
+						テレビ
 					</p>
-				</div>
-				<br>
-				<div style="position: absolute; top: 430px;">
-					<p>
-						<img src="image/test.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
-					</p>
-				</div>
-				<br>
-				<div style="position: absolute; top: 550px;">
-					<p>
-						<img src="image/test.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
-					</p>
-				</div>
-				<br>
-				<div style="position: absolute; top: 670px;">
-					<p>
-						<img src="image/test.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
-					</p>
-				</div>
-				<br>
-				<div style="position: absolute; top: 790px;">
-					<p>
-
-						<img src="image/test.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
-					</p>
-				</div>
-				<br>
-				<div style="position: absolute; top: 910px;">
-					<p>
-						<img src="image/test.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
-					</p>
-
 				</div>
 			</div>
 		</div>
