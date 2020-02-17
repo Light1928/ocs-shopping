@@ -2,11 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="ocs.UserBean"%>
 <%
-UserBean bean = (UserBean) session.getAttribute("account_entry");
+	UserBean bean = (UserBean) session.getAttribute("account_entry");
 
-/* if(session!=null){
-	response.sendRedirect("/login.jsp");
-} */
+	/* if(session!=null){
+		response.sendRedirect("/login.jsp");
+	} */
 %>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,8 @@ UserBean bean = (UserBean) session.getAttribute("account_entry");
 	</div>
 	<div id="outer2">
 		<form action="Account_entry2" method="post">
-			<p> ユーザID:<%=bean.getUser_id()%></p>
+			<p>
+				ユーザID:<%=bean.getUser_id()%></p>
 			<p>
 				名前:<%=bean.getName1()%>
 				<%=bean.getName2()%></p>
@@ -45,9 +46,8 @@ UserBean bean = (UserBean) session.getAttribute("account_entry");
 			</center>
 			<br>
 			<center>
-			<button class="a" type="button" id="clear_text"
-					onclick="location.href='./account_entry1.jsp'">入力画面に戻る</button>
-
+				<input type="button" value="入力画面に戻る"
+					onclick="location.href='./account_entry1.jsp'">
 			</center>
 		</form>
 	</div>

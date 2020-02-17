@@ -104,9 +104,9 @@
 			<div class="left-title">カテゴリー</div>
 			<div class="link">
 				<ul>
-					<li>書籍</li>
-					<li>家電</li>
-					<li>ゲーム</li>
+					<li><a href="home_book.jsp">書籍</a></li>
+					<li><a href="home_electronics.jsp">家電</a></li>
+					<li><a href="home_game.jsp">ゲーム</a></li>
 
 				</ul>
 			</div>
