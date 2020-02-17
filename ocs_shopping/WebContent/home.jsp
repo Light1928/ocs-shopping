@@ -105,9 +105,9 @@
 			<div class="left-title">カテゴリー</div>
 			<div class="link">
 				<ul>
-					<li><a href="home_book.jsp">書籍</a></li>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=2">書籍</a></li>
 					<li><a href="home_electronics.jsp">家電</a></li>
-					<li><a href="home_game.jsp">ゲーム</a></li>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=1">ゲーム</a></li>
 
 				</ul>
 			</div>

@@ -16,6 +16,7 @@
 <title>注文確認</title>
 </head>
 <body>
+<form action="CartDeleteAll" method="post">
 	<jsp:useBean id="cartInfoBean" class="ocs.CartInfoBean" scope="session" />
 	<div id="outer1">
 		<div id="header1">
@@ -53,9 +54,9 @@
 			<button class="button" type="button"
 				onclick="location.href='./order2.jsp'">戻る</button>
 			<!--ここservlet使うと思われる-->
-			<button class="button" type="button"
-				onclick="location.href='./order4.jsp'">注文確定</button>
+			<input type="submit" value="注文確定">
 		</center>
 	</div>
+	</form>
 </body>
 </html>
