@@ -44,6 +44,7 @@
 												out.println("<tr><td align=center>" + rcd.getGoodsname() + "</td><td align=right>" + rcd.getPrice() + "</td><td align=right>"
 														+ rcd.getQuantity() + "</td></tr>");
 									}
+
 					%>
 
 				</tr>
