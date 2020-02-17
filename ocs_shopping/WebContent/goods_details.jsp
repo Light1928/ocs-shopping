@@ -1,10 +1,11 @@
+<%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.sql.*"%>
 <%	String username = null;
 	String goods_name = null;
 	int goods_id= 0;
 	String details = null;
- session = request.getSession(false);
+ HttpSession session = request.getSession(false);
 if(session==null){
 response.sendRedirect("login.jsp");
 }else{
@@ -73,44 +74,44 @@ response.sendRedirect("login.jsp");
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
-					
+
 					case 3:
 						document.write('<img src="image/book1.jpg" width="200" height="200">')
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
-					
+
 					case 4:
 						document.write('<img src="image/book2.jpg" width="200" height="200">')
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
-					
+
 					case 5:
 						document.write('<img src="image/electronics1.jpg" width="200" height="200">')
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
-					
+
 					case 6:
 						document.write('<img src="image/electronics2.jpg" width="200" height="200">')
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
-					
+
 					case 7:
 						document.write('<img src="image/game1.jpg" width="200" height="200">')
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
-					
+
 					case 8:
 						document.write('<img src="image/game2.jpg" width="200" height="200">')
 				<%session.setAttribute("switch_black", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 					}
-			
+
 				</script>
 
 				<div class="content">
