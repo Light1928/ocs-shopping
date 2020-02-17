@@ -28,7 +28,8 @@
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<h1>OCSshop</h1>
+				<a href="home.jsp"><img src="image/OCS_logo.png"></a><a
+					href="home.jsp"><a1>OCSshop</a1></a>
 			</div>
 		</div>
 	</div>
@@ -41,9 +42,9 @@
 				<table class="table1">
 
 					<tr>
-					<h1>休場君の班の作ったメモ帳の機能とか使って名前とかだけ変更できやんかな？</h1>
-					<br>
-					<h1>無理なら頑張ってDB勉強して実装させる...たぶん</h1>
+						<h1>休場君の班の作ったメモ帳の機能とか使って名前とかだけ変更できやんかな？</h1>
+						<br>
+						<h1>無理なら頑張ってDB勉強して実装させる...たぶん</h1>
 					<tr>
 						<td>ユーザID</td>
 						<td><input autofocus required type="text" name='user_id'
@@ -104,6 +105,6 @@
 				<input type="submit" value="確認">
 			</div>
 		</form>
-		</div>
+	</div>
 </body>
 </html>

@@ -2,13 +2,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-	<!-- セッションが残っていたらトップサイトに強制的に遷移 -->
-	<%
-		HttpSession session = request.getSession(false);
-	if(session!=null){
+<!-- セッションが残っていたらトップサイトに強制的に遷移 -->
+<%
+	HttpSession session = request.getSession(false);
+	if (session != null) {
 		response.sendRedirect("home.jsp");
 	}
-	%>
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +20,21 @@
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<h1>OCSshop</h1>
+				<img src="image/OCS_logo.png">
+				<a1>OCSshop</a1>
 			</div>
 		</div>
 	</div>
 	<div id="outer2">
+	<br>
+			<a href="account_entry1.jsp"><a1><u>新規作成はこちら</u></a1></a>
 		<form action="Login_check" method="post">
 			<div id="formWrapper">
 				<div id="form">
 					<div class="logo"></div>
 					<div class="form-item">
 						<center>
-							<a class="formLabel">I D</a>
+							<br> <b>I D</b>
 						</center>
 						<center>
 							<input type="text" name="userid" id="userid" class="form-style"
@@ -40,7 +43,7 @@
 					</div>
 					<div class="form-item">
 						<center>
-							<p class="formLabel">P W</p>
+							<br> <b>P W</b>
 						</center>
 						<center>
 							<input type="password" name="password" id="password"
@@ -49,14 +52,9 @@
 					</div>
 					<div class="form-item">
 						<center>
-							<p class="pull-left">
-								<a href="account_entry1.jsp"><small>新規作成</small></a>
-							</p>
-						</center>
-						<center>
+						<br>
 							<input type="submit" value="login">
 						</center>
-						<div class="clear-fix"></div>
 					</div>
 				</div>
 			</div>

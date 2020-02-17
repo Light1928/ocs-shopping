@@ -1,195 +1,254 @@
 /*上と中央以外の部分*/
 body {
-background-color:#f8f8f8;
-margin:0;
-padding:0;
+	background-color: #f8f8f8;
+	margin: 0;
+	padding: 0;
 }
 
 /*内容量に応じた幅でブロックを中央寄せにしたいとき*/
-#outer{
-  text-align: center;
-}
-#inner{
-  display: inline-block;
-  text-align: left;
-  padding: 10px;
+#outer {
+	text-align: center;
 }
 
+#inner {
+	display: inline-block;
+	text-align: left;
+	padding: 10px;
+}
 
 /*OCSshopの上の構成部分*/
 #outer1 {
-background-color:#80ff80;
-margin:0 auto;
-width:1800px;
-border-left: 1px solid #80ff80;
-border-right: 1px solid #80ff80;
+	position: relative;
+	background-color: #80ff80;
+	margin: 0 auto;
+	width: 1075px;
+	border-left: 1px solid #80ff80;
+	border-right: 1px solid #80ff80;
 }
 
+#outer1 a1 {
+	position: absolute;
+	font-weight: bold;
+	color: #0080ff;
+	font-size: 30px;
+	top: 30%;
+	left: 44%;
+	margin: 0;
+	padding: 0;
+}
+
+#outer1 a2 {
+	position: absolute;
+	font-weight: bold;
+	color: #0000a0;
+	font-size: 20px;
+	top: 70%;
+	left: 75%;
+	margin: 0;
+	padding: 0;
+}
+
+#outer1 img {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	text-align: left;
+}
 /*OCSshopの下の構成部分*/
 #outer2 {
-background-color:#ffffff;
-margin:0 auto;
-width:1075px;
-border-left: 1px solid #357109;
-border-right: 1px solid #357109;
-height: 1000px;
+	position: relative;
+	background-color: #ffffff;
+	margin: 0 auto;
+	width: 1075px;
+	border-left: 1px solid #357109;
+	border-right: 1px solid #357109;
+	height: 1000px;
 }
 
-/*sampleより下を構成している部分*/
+#outer2 a1 {
+	position: absolute;
+	color: #0080ff;
+	font-size: 17px;
+	left: 1%;
+	margin: 0;
+	padding: 0;
+}
+
+/*上の色の長さ*/
 #header1 {
-height:80px;
+	height: 80px;
 }
 
 /*OCSshopのところ*/
 .header-inner {
-padding:15px 0 0 20px;
-font-size:12px;
+	padding: 15px 0 0 20px;
+	font-size: 12px;
 }
 
 /*OCSshopのところのｐ*/
-.header-inner p{
-font-size:12px;
+.header-inner p {
+	font-size: 12px;
 }
-
 
 h1 {
-font-weight:bold;
-color:#357109;
-font-size:30px;
-margin:0;
-padding:7px 0 0 0;
-text-align: center
+	font-weight: bold;
+	color: #357109;
+	font-size: 30px;
+	margin: 0;
+	padding: 7px 0 0 0;
+	text-align: center
 }
 
-h1 a{
-font-weight:bold;
-color:#357109;
-text-decoration:none;
+h1 a {
+	font-weight: bold;
+	color: #357109;
+	text-decoration: none;
 }
 
 /*青く伸びた部分*/
 h2 {
-font-size:16px;
-margin:0;
-padding:7px 0 7px 20px;
-background-color:#D6E7EE;
+	font-size: 16px;
+	margin: 0;
+	padding: 7px 0 7px 20px;
+	background-color: #D6E7EE;
 }
 
-h2 a{
-font-weight:bold;
-text-decoration: none;
-color:#265699;
+h2 a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #265699;
 }
 
 /*シンプルな黒*/
 p {
-margin:1em 0;
-font-size:20px;
-line-height:150%;
+	margin: 1em 0;
+	font-size: 20px;
+	line-height: 150%;
 }
 
-a{
-color:#094a94;
+a {
+	margin: 1em 0;
+	font-size: 20px;
+	line-height: 150%;
 }
 
+b {
+	font-weight: bold;
+	color: #0000ff;
+	font-size: 30px;
+	margin: 0;
+	padding: 7px 0 0 0;
+	text-align: center
+}
+
+c {
+	text-align: center;
+}
 /*見出しの青い部分の長さ*/
 #content {
-float:right;
-width:780px;
+	float: right;
+	width: 780px;
 }
 
 /*見出しの青い部分の位置*/
 .inner {
-margin:0 20px 0 0;
-padding:0;
+	margin: 0 20px 0 0;
+	padding: 0;
 }
 
 /*記事ページへのリンクの部分*/
 #left {
-color:#676767;
-font-size:13px;
-width:220px;
-float:left;
+	color: #676767;
+	font-size: 13px;
+	width: 220px;
+	float: left;
 }
 
 /*検索の部分*/
 .left-title {
-margin:0 15px 0 20px;
-padding:7px 20px;
-font-weight:bold;
-background-color:#E3E3E3;
-color:#333;
-border-top: 1px solid #c7c7c7;
-border-right: 1px solid #c7c7c7;
-border-left: 1px solid #c7c7c7;
+	margin: 0 15px 0 20px;
+	padding: 7px 20px;
+	font-weight: bold;
+	background-color: #E3E3E3;
+	color: #333;
+	border-top: 1px solid #c7c7c7;
+	border-right: 1px solid #c7c7c7;
+	border-left: 1px solid #c7c7c7;
 }
 
 /*linkの部分を管理しやすくなる？*/
 .link {
-margin:0 15px 7px 20px;
-padding:7px 8px 7px 13px;
-line-height:170%;
-border: 1px solid #c7c7c7;
+	margin: 0 15px 7px 20px;
+	padding: 7px 8px 7px 13px;
+	line-height: 170%;
+	border: 1px solid #c7c7c7;
 }
-.link a{
-color:#c7c7c7s;
-text-decoration:none;
+
+.link a {
+	color: #c7c7c7s;
+	text-decoration: none;
 }
-.link a:hover{
-text-decoration:underline;
+
+.link a:hover {
+	text-decoration: underline;
 }
 
 /*検索下の部分*/
 ul {
-margin: 0 0 0 1em;
-padding: 0;
+	margin: 0 0 0 1em;
+	padding: 0;
 }
+
 li {
-list-style:disc;
+	list-style: disc;
 }
 
 /*css無効*/
-#clear_text{
+#clear_text {
 	color: initial;
-	font-size:initial;
-	font-weight:initial;
-	border-style:initial;
-	background-color:initial;
-	box-shadow:initial;
-	-moz-box-shadow:initial;
+	font-size: initial;
+	font-weight: initial;
+	border-style: initial;
+	background-color: initial;
+	box-shadow: initial;
+	-moz-box-shadow: initial;
+}
+
+input#submit_button {
+	width: 100px;
+	padding: 15px;
 }
 
 /*ボタン関係*/
-button{
-/*文字サイズ */
-font-size:12px;
-/* 文字の太さをboldに指定 */
-font-weight: bold;
-/* 縦方向に10px、
+button {
+	/*文字サイズ */
+	font-size: 12px;
+	/* 文字の太さをboldに指定 */
+	font-weight: bold;
+	/* 縦方向に10px、
 * 横方向に30pxの余白を指定 */
-padding: 10px 75px;
-/* 文字色を白色に指定 */
-color: #fff;
-/* ボーダーをなくす */
-border-style: none;
-background-color: #24d;
-/* ボタンの影の指定
+	padding: 10px 75px;
+	/* 文字色を白色に指定 */
+	color: #fff;
+	/* ボーダーをなくす */
+	border-style: none;
+	background-color: #24d;
+	/* ボタンの影の指定
 * 影の横幅を2px
 * 縦長を2px
 * ぼかしを3px
 * 広がりを1px
 * 色を#666（グレー）に指定 */
-box-shadow: 2px 2px 3px 1px #666;
--moz-box-shadow: 2px 2px 3px 1px #666;
--webkit-box-shadow: 2px 2px 3px 1px #666;
-/* テキストの影の指定
+	box-shadow: 2px 2px 3px 1px #666;
+	-moz-box-shadow: 2px 2px 3px 1px #666;
+	-webkit-box-shadow: 2px 2px 3px 1px #666;
+	/* テキストの影の指定
  縦長を1px
 * ぼかしを2pxa
 * 色を#000（黒）に指定 */
-text-shadow: 1px 1px 2px #000;
-/* グラデーションの指定 */
-background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
-background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
-
-
+	text-shadow: 1px 1px 2px #000;
+	/* グラデーションの指定 */
+	background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
+	background: -webkit-gradient(linear, left bottom, left top, from(#36d),
+		color-stop(0.5, #248), to(#36d));
 }

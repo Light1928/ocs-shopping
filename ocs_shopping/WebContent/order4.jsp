@@ -1,13 +1,14 @@
-<%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%	String name=null;
-		HttpSession session = request.getSession(false);
-	if(session==null){
+<%
+	String name = null;
+	session = request.getSession(false);
+	if (session == null) {
 		response.sendRedirect("login.jsp");
-		}else{
-		 name = (String)session.getAttribute("username");}
-	%>
+	} else {
+		name = (String) session.getAttribute("username");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,8 @@
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<h1>OCSshop</h1>
+				<img src="image/OCS_logo.png">
+				<a1>OCSshop</a1>
 			</div>
 		</div>
 	</div>
@@ -35,8 +37,8 @@
 		</center>
 		<br>
 		<center>
-			<button class="button" type="button"
-				onclick="location.href='./home.jsp'">Topへ戻る</button>
+				<input type="button" value="Topへ戻る"
+					onclick="location.href='./home.jsp'">
 		</center>
 	</div>
 </body>

@@ -19,14 +19,17 @@
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<h1>OCSshop</h1>
+				<img src="image/OCS_logo.png">
+				<a1>OCSshop</a1>
 			</div>
 		</div>
 	</div>
 	<div id="outer2">
 		<form action="Account_entry2" method="post">
-			<p>
+			<center><br>
+			<a>
 				ユーザID:<%=bean.getUser_id()%></p>
+			</a>
 			<p>
 				名前:<%=bean.getName1()%>
 				<%=bean.getName2()%></p>
@@ -41,13 +44,12 @@
 			<p>
 				メールアドレス:<%=bean.getMail_address()%></p>
 			<p>パスワード:•••••••••</p>
-			<center>
-				<input type="submit" value="以下の内容で登録" />
 			</center>
-			<br>
 			<center>
 				<input type="button" value="入力画面に戻る"
 					onclick="location.href='./account_entry1.jsp'">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" value="以下の内容で登録" />
 			</center>
 		</form>
 	</div>

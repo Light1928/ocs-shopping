@@ -11,8 +11,7 @@
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<a href="home.jsp"><img src="image/OCS_logo.png"></a><a
-					href="home.jsp"><a1>OCSshop</a1></a>
+				<h1>OCSshop</h1>
 			</div>
 		</div>
 	</div>
@@ -32,7 +31,7 @@
 				</form>
 			</div>
 		</div>
-		<h1>ここにワードで作った画像でもはろうかなと思います</h1>
+		<h1>ここは特に何も考えてない</h1>
 	</div>
 </body>
 </html>

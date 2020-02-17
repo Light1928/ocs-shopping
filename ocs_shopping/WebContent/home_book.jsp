@@ -1,14 +1,16 @@
 <%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<!-- セッションがなかったらログイン画面へ戻る　全てのページにこれを追加することでURLからの飛び込み防止可能 -->
-	<%	String name=null;
-		HttpSession session = request.getSession(false);
-	if(session==null){
+<!-- セッションがなかったらログイン画面へ戻る　全てのページにこれを追加することでURLからの飛び込み防止可能 -->
+<%
+	String name = null;
+	HttpSession session = request.getSession(false);
+	if (session == null) {
 		response.sendRedirect("login.jsp");
-		}else{
-		 name = (String)session.getAttribute("username");}
-	%>
+	} else {
+		name = (String) session.getAttribute("username");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,20 +19,22 @@
 <title>OCSshop</title>
 </head>
 <body>
-<%-- <%String username;
+	<%-- <%String username;
 	UserBean bean = (UserBean) session.getAttribute("account_entry");
 	String name = bean.getName1()+bean.getName2();
 %> --%>
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<h1>OCSshop</h1>
+				<a href="home.jsp"><img src="image/OCS_logo.png"></a><a
+					href="home.jsp"><a1>OCSshop</a1></a>
 			</div>
 		</div>
 	</div>
 	<div id="outer2">
-	<br>
-	<font size="4" color="#000000">　　ようこそ、<%=name%>さん</font></td>
+		<br> <font size="4" color="#000000"> ようこそ、<%=name%>さん
+		</font>
+		</td>
 		<div id="outer">
 			<div id="inner">
 				<button class="button" type="button"
@@ -50,15 +54,17 @@
 			<div class="inner">
 				<h2>商品一覧</h2>
 				<div style="position: absolute; top: 190px;">
-					<p><a href=/ocs_shopping/Goods_select?Goods_ID=3>
-					<img src="image/book1.jpg" width="100" height="100\" align="middle"></a>
+					<p>
+						<a href=/ocs_shopping/Goods_select?Goods_ID=3> <img
+							src="image/book1.jpg" width="100" height="100\" align="middle"></a>
 						基本情報技術者試験参考書
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 310px;">
-					<p><a href=/ocs_shopping/Goods_select?Goods_ID=4>
-						<img src="image/book2.jpg" width="100" height="100\" align="middle"></a>
+					<p>
+						<a href=/ocs_shopping/Goods_select?Goods_ID=4> <img
+							src="image/book2.jpg" width="100" height="100\" align="middle"></a>
 						応用情報技術者試験参考書
 					</p>
 				</div>
