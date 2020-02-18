@@ -83,7 +83,7 @@
 					</form>
 				</div>
 			</div>
-			<div style="position: absolute; top: 250px; left: 350px">
+			<div style="position: absolute; top: 150px; left: 350px">
 
 				<script>
 					var id =
