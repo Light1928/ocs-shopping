@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<jsp:useBean id="cartInfoBean" class="ocs.CartInfoBean" scope="session" />
+	<jsp:useBean id="cartInfoBean" class="ocs.CartInfoBean" scope="request" />
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">

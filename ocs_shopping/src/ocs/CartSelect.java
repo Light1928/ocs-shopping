@@ -17,15 +17,15 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/CartSelect")
 public class CartSelect extends HttpServlet {
 	// 家用
-	 private static final String HOST_NAME = "localhost:3306";
+//	 private static final String HOST_NAME = "localhost:3306";
 	 private static final String DB_NAME = "webapp2019_OCSshop";
-	 private static final String USER_NAME = "root";
-	 private static final String USER_PASS = "";
+//	 private static final String USER_NAME = "root";
+//	 private static final String USER_PASS = "";
 
 	// 学校用
-//	public static final String HOST_NAME = "10.15.121.37:3306";
-//	public static final String USER_NAME = "user_OCSshop";
-//	public static final String USER_PASS = "OCSshop";
+	public static final String HOST_NAME = "10.15.121.37:3306";
+	public static final String USER_NAME = "user_OCSshop";
+	public static final String USER_PASS = "OCSshop";
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	CartInfoBean cartInfoBean = new CartInfoBean();
 
@@ -40,9 +40,9 @@ public class CartSelect extends HttpServlet {
 					"     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" +
 					"     WHERE Quantity >= 1";
 
-			Class.forName("com.mysql.jdbc.Driver");
+		//	Class.forName("com.mysql.jdbc.Driver");
 			// MySQL用
-			//Class.forName("org.mariadb.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 			// 家用
 			Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
 			// 学校用
@@ -51,11 +51,12 @@ public class CartSelect extends HttpServlet {
 			String gName;
 			int price, quantity;
 			ResultSet rs = stmt.executeQuery();
+			
 			while (rs.next()) {
 				gName = rs.getString("Goods_Name");
 				price = rs.getInt("Price");
 				quantity = rs.getInt("Quantity");
-
+				
 				CartRecordBean cartRecordBean = new CartRecordBean();
 				cartRecordBean.setGoodsname(gName);
 				cartRecordBean.setPrice(price);

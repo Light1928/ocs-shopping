@@ -24,15 +24,15 @@ public class CartDeleteAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	//家用
-			private static final String HOST_NAME = "localhost:3306";
+//			private static final String HOST_NAME = "localhost:3306";
 			private static final String DB_NAME   = "webapp2019_OCSshop";
-			private static final String  USER_NAME = "root";
-			private static final String USER_PASS = "";
+//			private static final String  USER_NAME = "root";
+//			private static final String USER_PASS = "";
 
 			//学校用
-//			public static final String HOST_NAME = "10.15.121.37:3306";
-//			public static final String USER_NAME = "user_OCSshop";
-//			public static final String USER_PASS = "OCSshop";
+			public static final String HOST_NAME = "10.15.121.37:3306";
+			public static final String USER_NAME = "user_OCSshop";
+			public static final String USER_PASS = "OCSshop";
 			private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -44,9 +44,9 @@ public class CartDeleteAll extends HttpServlet {
 		try {
 			String sql ="DELETE FROM CART WHERE User_ID = '"+user_id+"'";
 			//MySQL用
-			Class.forName("com.mysql.jdbc.Driver");
+		//	Class.forName("com.mysql.jdbc.Driver");
 			//学校用
-			//Class.forName("org.mariadb.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 
 			Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
 

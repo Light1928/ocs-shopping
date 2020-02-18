@@ -23,15 +23,15 @@ public class CartAdd extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	//家用
-		private static final String HOST_NAME = "localhost:3306";
+//		private static final String HOST_NAME = "localhost:3306";
 		private static final String DB_NAME   = "webapp2019_OCSshop";
-		private static final String  USER_NAME = "root";
-		private static final String USER_PASS = "";
+//		private static final String  USER_NAME = "root";
+//		private static final String USER_PASS = "";
 
 		//学校用
-//		public static final String HOST_NAME = "10.15.121.37:3306";
-//		public static final String USER_NAME = "user_OCSshop";
-//		public static final String USER_PASS = "OCSshop";
+		public static final String HOST_NAME = "10.15.121.37:3306";
+		public static final String USER_NAME = "user_OCSshop";
+		public static final String USER_PASS = "OCSshop";
 		private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 
 		CartInfoBean cartInfoBean = new CartInfoBean();
@@ -58,8 +58,8 @@ public class CartAdd extends HttpServlet {
 			String sql = "INSERT INTO CART VALUES('"+user_id+"',"+goods_id+","+quantity+")";
 
 			//MySQL用
-			Class.forName("com.mysql.jdbc.Driver");
-			//Class.forName("org.mariadb.jdbc.Driver");
+			//Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 			//学校用
 
 			Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
