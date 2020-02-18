@@ -28,7 +28,7 @@
 	<div id="outer2">
 		<center>
 			<h1>支払方法</h1>
-			<form>
+			<form action="./order3.jsp" method="get">
 				<img src="image/step2.png" width="700" height="119"><br>
 				<select name="example">
 					<option value="クレジットカード">クレジットカード</option>
@@ -36,8 +36,7 @@
 				</select> <br> <br> <input type="button" value="戻る"
 					onclick="location.href='./order1.jsp'">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button" value="次へ"
-					onclick="location.href='./order3.jsp'">
+				<input type="submit" value="次へ">
 			</form>
 		</center>
 		</form>

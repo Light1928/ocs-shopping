@@ -29,9 +29,28 @@ response.sendRedirect("login.jsp");
 <meta charset="UTF-8">
 <link rel="stylesheet" href="homepage.css" type="text/css" />
 <title><%=goods_name%></title>
+
+<script type="text/javascript">
+function check(){
+
+	if(window.confirm('送信してよろしいですか？')){ // 確認ダイアログを表示
+		window.alert('カートに追加しました');
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+</script>
 </head>
 <body>
-	<form action="CartAdd" method="post">
+
+	<form action="CartAdd" method="post" onSubmit="return check()">
 		<div id="outer1">
 			<div id="header1">
 				<div class="header-inner">

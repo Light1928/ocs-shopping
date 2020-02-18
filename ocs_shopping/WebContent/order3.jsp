@@ -3,11 +3,14 @@
 	import="java.util.ArrayList"%>
 <%
 	String name = null;
+	String example = null;
 	session = request.getSession(false);
 	if (session == null) {
 		response.sendRedirect("login.jsp");
 	} else {
 		name = (String) session.getAttribute("username");
+		example = (String)request.getParameter("example");
+
 	}
 %>
 <!DOCTYPE html>
@@ -55,6 +58,14 @@
 					</tr>
 				</table>
 				<br>
+				<table border="3">
+					<tr>
+						<th width="200">支払い方法</th>
+						<tr><td align=center><%=example %></td>
+						</tr>
+				</table>
+				<br>
+
 				<h2>これらの商品の購入を確定しますが本当によろしいでしょうか？</h2>
 				<br> <input type="button" value="戻る"
 					onclick="location.href='./order2.jsp'">
