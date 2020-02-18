@@ -39,9 +39,9 @@ public class CartAdd extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		String goods_name = null;
 		HttpSession session = request.getSession();
-		String goods_name = (String)session.getAttribute("switch");
+		 goods_name= (String)session.getAttribute("goods_name");
 		//ゲットできた
 		System.out.println(goods_name);
 

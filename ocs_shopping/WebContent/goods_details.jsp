@@ -64,52 +64,42 @@ response.sendRedirect("login.jsp");
 					;
 					switch (id) {
 					case 1:
-						document.write('<img src="image/test.jpg" width="200" height="200">')
-				<%session.setAttribute("switch", goods_name);
+						document.write('<img src="image/game1.jpg" width="200" height="200">')
+				<%session.setAttribute("goods_name", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 2:
-						document.write('<img src="image/test2.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
+						document.write('<img src="image/game2.jpg" width="200" height="200">')
+				<%session.setAttribute("goods_name", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 3:
 						document.write('<img src="image/book1.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
+				<%session.setAttribute("goods_name", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 4:
 						document.write('<img src="image/book2.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
+				<%session.setAttribute("goods_name", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 5:
 						document.write('<img src="image/electronics1.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
+				<%session.setAttribute("goods_name", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 6:
 						document.write('<img src="image/electronics2.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
+				<%session.setAttribute("goods_name", goods_name);
 				  session.setAttribute("goods_id", goods_id);%>
 					break;
 
-					case 7:
-						document.write('<img src="image/game1.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
-				  session.setAttribute("goods_id", goods_id);%>
-					break;
 
-					case 8:
-						document.write('<img src="image/game2.jpg" width="200" height="200">')
-				<%session.setAttribute("switch_black", goods_name);
-				  session.setAttribute("goods_id", goods_id);%>
-					break;
 					}
 
 				</script>
