@@ -63,24 +63,24 @@
 						switch (id) {
 						case 1:
 							document
-									.write('<img src="image/game1.jpg" width="200" height="200">')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=1><img src="image/game1.jpg" width="200" height="200"></a>')
 							document
-									.write('<img src="image/game2.jpg" width="200" height="200">')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=2><img src="image/game2.jpg" width="200" height="200"></a>')
 
 							break;
 
 						case 2:
 							document
-									.write('<img src="image/book1.jpg" width="200" height="200">')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=3><img src="image/book1.jpg" width="200" height="200"></a>')
 							document
-									.write('<img src="image/book2.jpg" width="200" height="200">')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=4><img src="image/book2.jpg" width="200" height="200"></a>')
 							break;
 
 						case 3:
 							document
-									.write('<img src="image/electronics1.jpg" width="200" height="200">')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=5><img src="image/electronics1.jpg" width="200" height="200"></a>')
 							document
-									.write('<img src="image/electronics2.jpg" width="200" height="200">')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=6><img src="image/electronics2.jpg" width="200" height="200"></a>')
 							break;
 
 						}
