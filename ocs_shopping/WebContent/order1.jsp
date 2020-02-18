@@ -43,7 +43,7 @@
 
 					<%
 						ArrayList<CartRecordBean> crtRecordArray = cartInfoBean.getCartlistArray();
-							crtRecordArray.clear();
+					//crtRecordArray.clear();
 						for (CartRecordBean rcd : crtRecordArray) {
 							out.println("<tr><td align=center>" + rcd.getGoodsname() + "</td><td align=right>" + rcd.getPrice()
 									+ "</td><td align=right>" + rcd.getQuantity() + "</td></tr>");
