@@ -3,12 +3,12 @@
 	pageEncoding="UTF-8"%>
 <!-- セッションがなかったらログイン画面へ戻る　全てのページにこれを追加することでURLからの飛び込み防止可能 -->
 <%
-	String name = null;
+	String username = null;
 	HttpSession session = request.getSession(false);
 	if (session == null) {
 		response.sendRedirect("login.jsp");
 	} else {
-		name = (String) session.getAttribute("username");
+		username = (String) session.getAttribute("username");
 	}
 %>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
 			<div class="header-inner">
 				<img src="image/OCS_logo.png">
 				<a1>OCSshop</a1>
-				<a2>ようこそ、<%=name%>さん</a2>
+				<a2>ようこそ、<%=username%>さん</a2>
 			</div>
 		</div>
 	</div>
@@ -102,7 +102,7 @@
 						文章あれこれ
 					</p>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
