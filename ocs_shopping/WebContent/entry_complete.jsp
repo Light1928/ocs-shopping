@@ -26,7 +26,7 @@
 				<br>
 				<center>
 					<input type="button" value="Topへ戻る"
-					onclick="location.href='./login.jsp'">
+						onclick="location.href='./login.jsp'">
 				</center>
 			</div>
 		</center>

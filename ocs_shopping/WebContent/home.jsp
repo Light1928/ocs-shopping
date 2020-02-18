@@ -19,10 +19,7 @@
 <title>OCSshop</title>
 </head>
 <body>
-	<%-- <%String username;
-	UserBean bean = (UserBean) session.getAttribute("account_entry");
-	String name = bean.getName1()+bean.getName2();
-%> --%>
+
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
@@ -60,7 +57,7 @@
 				<div style="position: absolute; top: 190px;">
 					<a href=/ocs_shopping/Goods_select?Goods_ID=1> <img
 						src="image/game1.jpg" width="100" height="100\" align="middle">
-					Nintendo Switch
+						Nintendo Switch
 					</a>
 				</div>
 				<br>
@@ -68,40 +65,40 @@
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=2> <img
 							src="image/game2.jpg" width="100" height="100\" align="middle">
-						PlayStation
+							PlayStation
 						</a>
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 430px;">
 					<p>
-						<a href=/ocs_shopping/Goods_select?Goods_ID=3>
-						<img src="image/book1.jpg" width="100" height="100\" align="middle">
-						FE_Text
+						<a href=/ocs_shopping/Goods_select?Goods_ID=3> <img
+							src="image/book1.jpg" width="100" height="100\" align="middle">
+							FE_Text
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 550px;">
 					<p>
-						<a href=/ocs_shopping/Goods_select?Goods_ID=4>
-						<img src="image/book2.jpg" width="100" height="100\" align="middle">
-						AP_Text
+						<a href=/ocs_shopping/Goods_select?Goods_ID=4> <img
+							src="image/book2.jpg" width="100" height="100\" align="middle">
+							AP_Text
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 670px;">
 					<p>
-						<a href=/ocs_shopping/Goods_select?Goods_ID=5>
-						<img src="image/electronics1.jpg" width="100" height="100\" align="middle">
-						dyson
+						<a href=/ocs_shopping/Goods_select?Goods_ID=5> <img
+							src="image/electronics1.jpg" width="100" height="100\"
+							align="middle"> dyson
 					</p>
 				</div>
 				<br>
 				<div style="position: absolute; top: 790px;">
 					<p>
-						<a href=/ocs_shopping/Goods_select?Goods_ID=6>
-						<img src="image/electronics2.jpg" width="100" height="100\" align="middle">
-						TV
+						<a href=/ocs_shopping/Goods_select?Goods_ID=6> <img
+							src="image/electronics2.jpg" width="100" height="100\"
+							align="middle"> TV
 					</p>
 				</div>
 

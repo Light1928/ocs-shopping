@@ -31,9 +31,9 @@ public class Login_check extends HttpServlet {
 
 
 	//学校用
-//	private static final String HOST_NAME = "10.15.121.37:3306";
-//	private static final String USER_NAME = "user_OCSshop";
-//	private static final String USER_PASS = "OCSshop";
+	//	private static final String HOST_NAME = "10.15.121.37:3306";
+	//	private static final String USER_NAME = "user_OCSshop";
+	//	private static final String USER_PASS = "OCSshop";
 
 
 	@Override
@@ -92,7 +92,7 @@ public class Login_check extends HttpServlet {
 
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()) {
-				 this.username = rs.getString("Name");
+				this.username = rs.getString("Name");
 				System.out.println("exist ID/PASSWORD pattern.");
 				return true;
 			} else {

@@ -20,16 +20,16 @@ import javax.servlet.http.HttpSession;
 public class Account_entry2 extends HttpServlet {
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	private static final String DB_NAME   = "webapp2019_OCSshop";
-//	//家用
+	//	//家用
 	private static final String HOST_NAME = "localhost:3306";
 	private static final String  USER_NAME = "root";
 	//private static final String USER_PASS = "";
 	//青木用
 	private static final String USER_PASS = "root";
 	//学校用
-//	private static final String HOST_NAME = "10.15.121.37:3306";
-//	private static final String USER_NAME = "user_OCSshop";
-//	private static final String USER_PASS = "OCSshop";
+	//	private static final String HOST_NAME = "10.15.121.37:3306";
+	//	private static final String USER_NAME = "user_OCSshop";
+	//	private static final String USER_PASS = "OCSshop";
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,28 +50,28 @@ public class Account_entry2 extends HttpServlet {
 
 		int ret = 0;
 		try {
-		String sql = "INSERT INTO CUSTOMER VALUES(NULL,?,?,?,?,?,?,?)";
-		//MySQL用
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		//学校用
-		//Class.forName("org.mariadb.jdbc.Driver");
-		Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
-		PreparedStatement stmt = con.prepareStatement(sql);
-		stmt.setString(1,user_id);
-		stmt.setString(2,mail_address);
-		stmt.setString(3,password);
-		stmt.setString(4,phoneNo);
-		stmt.setString(5,zip31+zip32);
-		stmt.setString(6,addr31);
-		stmt.setString(7,name1+name2);
-		ret = stmt.executeUpdate();
-		System.out.println(ret);
-		if(ret==1) {
-			session.invalidate();
-			response.sendRedirect("entry_complete.jsp");
-		}else {
-			System.out.println("error");
-		}
+			String sql = "INSERT INTO CUSTOMER VALUES(NULL,?,?,?,?,?,?,?)";
+			//MySQL用
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//学校用
+			//Class.forName("org.mariadb.jdbc.Driver");
+			Connection con = DriverManager.getConnection(URL,USER_NAME, USER_PASS);
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1,user_id);
+			stmt.setString(2,mail_address);
+			stmt.setString(3,password);
+			stmt.setString(4,phoneNo);
+			stmt.setString(5,zip31+zip32);
+			stmt.setString(6,addr31);
+			stmt.setString(7,name1+name2);
+			ret = stmt.executeUpdate();
+			System.out.println(ret);
+			if(ret==1) {
+				session.invalidate();
+				response.sendRedirect("entry_complete.jsp");
+			}else {
+				System.out.println("error");
+			}
 		}catch(Exception ex) {
 			String msg = "ドライバのロードに失敗しました";
 			System.out.println(ex);

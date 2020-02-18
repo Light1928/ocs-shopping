@@ -53,10 +53,10 @@
 				</tr>
 			</table>
 			<br> <input type="button" value="Topへ戻る"
-					onclick="location.href='./home.jsp'">
+				onclick="location.href='./home.jsp'">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="button" value="次へ"
-					onclick="location.href='./order2.jsp'">
+			<input type="button" value="次へ"
+				onclick="location.href='./order2.jsp'">
 		</center>
 	</div>
 </body>

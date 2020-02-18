@@ -21,10 +21,7 @@
 <title>OCSshop</title>
 </head>
 <body>
-	<%-- <%String username;
-	UserBean bean = (UserBean) session.getAttribute("account_entry");
-	String name = bean.getName1()+bean.getName2();
-%> --%>
+
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
@@ -89,19 +86,7 @@
 
 						}
 					</script>
-					<!-- <div style="position: absolute; top: 190px;">
-					<p><a href=/ocs_shopping/Goods_select?Goods_ID=7>
-					<img src="image/game1.jpg" width="100" height="100\" align="middle"></a>
-						任天堂SWITCH
-					</p>
-				</div>
-				<br>
-				<div style="position: absolute; top: 310px;">
-					<p><a href=/ocs_shopping/Goods_select?Goods_ID=8>
-						<img src="image/game2.jpg" width="100" height="100\" align="middle"></a>
-						PLAYSTATION4
-					</p>
-				</div> -->
+
 				</div>
 			</div>
 		</div>

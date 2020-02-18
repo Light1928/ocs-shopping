@@ -25,8 +25,8 @@
 				<h1>認証に失敗しました</h1>
 				<br>
 				<center>
-						<input type="button" value="戻る"
-					onclick="location.href='./login.jsp'">
+					<input type="button" value="戻る"
+						onclick="location.href='./login.jsp'">
 				</center>
 			</div>
 		</center>

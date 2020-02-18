@@ -27,8 +27,7 @@
 		</div>
 	</div>
 	<div id="outer2">
-		<!--  <div style="display:inline-block;background:#fcfcff; padding:15px;
- border:1px solid #3b5998; border-radius:10px; word-break:break-all;">-->
+
 		<center>
 			<h1>注文手続きが完了しました。</h1>
 		</center>
@@ -38,8 +37,8 @@
 		</center>
 		<br>
 		<center>
-				<input type="button" value="Topへ戻る"
-					onclick="location.href='./home.jsp'">
+			<input type="button" value="Topへ戻る"
+				onclick="location.href='./home.jsp'">
 		</center>
 	</div>
 </body>
