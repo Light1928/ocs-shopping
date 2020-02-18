@@ -33,49 +33,44 @@ public class CartSelect extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session  = request.getSession();
-        String user_id = (String)session.getAttribute("userid");
+		try {
 
-        try {
+ 			String sql = "SELECT Goods_Name,Price,Quantity" +
+ 					"     FROM GOODS a JOIN CART b ON a.Goods_id = b.Goods_ID" +
+ 					"     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" +
+ 					"     WHERE Quantity >= 1";
 
-            String sql = "SELECT Goods_Name,Price,Quantity" +
-                    "     FROM GOODS a JOIN CART b ON a.Goods_id = b.Goods_ID" +
-                    "     JOIN GOODS_DETAILS c ON a.Goods_ID  = c.Goods_ID" +
-                    "     WHERE Quantity >= 1"+
-                    "      AND b.User_ID="+user_id;
+ 			//	Class.forName("com.mysql.jdbc.Driver");
+ 			// MySQL用
+ 			Class.forName("org.mariadb.jdbc.Driver");
+ 			// 家用
+ 			Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
+ 			// 学校用
+ 			PreparedStatement stmt = con.prepareStatement(sql);
 
-            //    Class.forName("com.mysql.jdbc.Driver");
-            // MySQL用
-            Class.forName("org.mariadb.jdbc.Driver");
-            // 家用
-            Connection con = DriverManager.getConnection(URL, USER_NAME, USER_PASS);
-            // 学校用
-            PreparedStatement stmt = con.prepareStatement(sql);
+ 			String gName;
+ 			int price, quantity;
+ 			ResultSet rs = stmt.executeQuery();
 
-            String gName;
-            int price, quantity;
-            ResultSet rs = stmt.executeQuery();
+ 			while (rs.next()) {
+ 				gName = rs.getString("Goods_Name");
+ 				price = rs.getInt("Price");
+ 				quantity = rs.getInt("Quantity");
 
-            while (rs.next()) {
-                gName = rs.getString("Goods_Name");
-                price = rs.getInt("Price");
-                quantity = rs.getInt("Quantity");
+ 				CartRecordBean cartRecordBean = new CartRecordBean();
+ 				cartRecordBean.setGoodsname(gName);
+ 				cartRecordBean.setPrice(price);
+ 				cartRecordBean.setQuantity(quantity);
+ 				cartInfoBean.addCartlist(cartRecordBean);
 
-                CartRecordBean cartRecordBean = new CartRecordBean();
-                cartRecordBean.setGoodsname(gName);
-                cartRecordBean.setPrice(price);
-                cartRecordBean.setQuantity(quantity);
-                cartInfoBean.addCartlist(cartRecordBean);
-
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-        session.setAttribute("cartInfoBean",cartInfoBean);
-        getServletContext().getRequestDispatcher("/order1.jsp")
-        .forward(request, response);
-
+ 			}
+ 		} catch (Exception ex) {
+ 			ex.printStackTrace();
+ 		}
+ 		HttpSession session = request.getSession(false);
+ 		session.setAttribute("cartInfoBean",cartInfoBean);
+ 		getServletContext().getRequestDispatcher("/order1.jsp")
+ 		.forward(request, response);
 	}
 
 }
