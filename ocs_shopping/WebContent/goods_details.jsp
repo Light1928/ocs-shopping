@@ -64,18 +64,14 @@ function check(){
 		<br>
 			<div id="outer">
 				<div id="inner">
-					<button class="button" type="button"
-						onclick="location.href='./Login_check.java'">ログアウト</button>
-					<button class="button" type="button"
-						onclick="location.href='./setsumeisyo.jsp'">説明書</button>
-					<button class="button" type="button"
-						onclick="location.href='./kategoribetsu.jsp'">何かしら</button>
-					<button class="button" type="button"
-						onclick="location.href='./account_change.jsp'">アカウント設定</button>
-					<form style="display: inline" action=CartSelect method="post">
-						<button class="button" type="submit">カート</button>
-					</form>
-				</div>
+				<button class="button" type="button"
+					onclick="location.href='./logout.jsp'">ログアウト</button>
+				<button class="button" type="button"
+					onclick="location.href='./setsumeisyo.jsp'">説明書</button>
+				<form style="display: inline" action=CartSelect method="post">
+					<button class="button" type="submit">カート</button>
+				</form>
+			</div>
 			</div>
 			<div style="position: absolute; top: 250px; left: 350px">
 

@@ -31,13 +31,9 @@
 		<div id="outer">
 			<div id="inner">
 				<button class="button" type="button"
-					onclick="location.href='./login.jsp'">ログアウト</button>
+					onclick="location.href='./logout.jsp'">ログアウト</button>
 				<button class="button" type="button"
 					onclick="location.href='./setsumeisyo.jsp'">説明書</button>
-				<button class="button" type="button"
-					onclick="location.href='./kategoribetsu.jsp'">何かしら</button>
-				<button class="button" type="button"
-					onclick="location.href='./account_change.jsp'">アカウント設定</button>
 				<form style="display: inline" action=CartSelect method="post">
 					<button class="button" type="submit">カート</button>
 				</form>
