@@ -59,15 +59,17 @@
 				<h2>商品一覧</h2>
 				<div style="position: absolute; top: 190px;">
 					<a href=/ocs_shopping/Goods_select?Goods_ID=1> <img
-						src="image/game1.jpg" width="100" height="100\" align="middle"></a>
-					文章あれこれ
+						src="image/game1.jpg" width="100" height="100\" align="middle">
+					Nintendo Switch
+					</a>
 				</div>
 				<br>
 				<div style="position: absolute; top: 310px;">
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=2> <img
-							src="image/game2.jpg" width="100" height="100\" align="middle"></a>
-						文章あれこれ
+							src="image/game2.jpg" width="100" height="100\" align="middle">
+						PlayStation
+						</a>
 					</p>
 				</div>
 				<br>
@@ -75,7 +77,7 @@
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=3>
 						<img src="image/book1.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
+						FE_Text
 					</p>
 				</div>
 				<br>
@@ -83,7 +85,7 @@
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=4>
 						<img src="image/book2.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
+						AP_Text
 					</p>
 				</div>
 				<br>
@@ -91,7 +93,7 @@
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=5>
 						<img src="image/electronics1.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
+						dyson
 					</p>
 				</div>
 				<br>
@@ -99,7 +101,7 @@
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=6>
 						<img src="image/electronics2.jpg" width="100" height="100\" align="middle">
-						文章あれこれ
+						TV
 					</p>
 				</div>
 
