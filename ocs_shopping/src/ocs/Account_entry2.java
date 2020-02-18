@@ -21,15 +21,15 @@ public class Account_entry2 extends HttpServlet {
 	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
 	private static final String DB_NAME   = "webapp2019_OCSshop";
 //	//家用
-//	private static final String HOST_NAME = "localhost:3306";
-//	private static final String  USER_NAME = "root";
-//	private static final String USER_PASS = "";
+	private static final String HOST_NAME = "localhost:3306";
+	private static final String  USER_NAME = "root";
+	private static final String USER_PASS = "";
 	//青木用
 	//private static final String USER_PASS = "root";
 	//学校用
-	private static final String HOST_NAME = "10.15.121.37:3306";
-	private static final String USER_NAME = "user_OCSshop";
-	private static final String USER_PASS = "OCSshop";
+//	private static final String HOST_NAME = "10.15.121.37:3306";
+//	private static final String USER_NAME = "user_OCSshop";
+//	private static final String USER_PASS = "OCSshop";
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

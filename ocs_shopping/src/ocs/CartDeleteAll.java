@@ -22,18 +22,18 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/CartDeleteAll")
 public class CartDeleteAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
+	private static final String DB_NAME   = "webapp2019_OCSshop";
 	//家用
-//			private static final String HOST_NAME = "localhost:3306";
-			private static final String DB_NAME   = "webapp2019_OCSshop";
-//			private static final String  USER_NAME = "root";
-//			private static final String USER_PASS = "";
+			private static final String HOST_NAME = "localhost:3306";
+			private static final String  USER_NAME = "root";
+			private static final String USER_PASS = "";
 
 			//学校用
-			public static final String HOST_NAME = "10.15.121.37:3306";
-			public static final String USER_NAME = "user_OCSshop";
-			public static final String USER_PASS = "OCSshop";
-			private final String URL = "jdbc:mysql://" + HOST_NAME + "/" + DB_NAME + "?serverTimezone=JST";
+//			public static final String HOST_NAME = "10.15.121.37:3306";
+//			public static final String USER_NAME = "user_OCSshop";
+//			public static final String USER_PASS = "OCSshop";
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session  = request.getSession();
