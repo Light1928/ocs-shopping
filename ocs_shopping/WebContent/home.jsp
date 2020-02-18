@@ -33,16 +33,22 @@
 		</div>
 	</div>
 	<div id="outer2">
+		<div id="left">
+			<div class="left-title">カテゴリー</div>
+			<div class="link">
+				<ul>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=2">書籍</a></li>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=3">家電</a></li>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=1">ゲーム</a></li>
+				</ul>
+			</div>
+		</div>
 		<div id="outer">
 			<div id="inner">
 				<button class="button" type="button"
 					onclick="location.href='./logout.jsp'">ログアウト</button>
 				<button class="button" type="button"
 					onclick="location.href='./setsumeisyo.jsp'">説明書</button>
-				<button class="button" type="button"
-					onclick="location.href='./kategoribetsu.jsp'">何かしら</button>
-				<button class="button" type="button"
-					onclick="location.href='./account_change.jsp'">アカウント設定</button>
 				<form style="display: inline" action=CartSelect method="post">
 					<button class="button" type="submit">カート</button>
 				</form>
@@ -52,9 +58,9 @@
 			<div class="inner">
 				<h2>商品一覧</h2>
 				<div style="position: absolute; top: 190px;">
-						<a href=/ocs_shopping/Goods_select?Goods_ID=1> <img
-							src="image/test.jpg" width="100" height="100\" align="middle"></a>
-						文章あれこれ
+					<a href=/ocs_shopping/Goods_select?Goods_ID=1> <img
+						src="image/test.jpg" width="100" height="100\" align="middle"></a>
+					文章あれこれ
 				</div>
 				<br>
 				<div style="position: absolute; top: 310px;">
@@ -101,17 +107,6 @@
 					</p>
 
 				</div>
-			</div>
-		</div>
-		<div id="left">
-			<div class="left-title">カテゴリー</div>
-			<div class="link">
-				<ul>
-					<li><a href="/ocs_shopping/Category_select?Category_ID=2">書籍</a></li>
-					<li><a href="/ocs_shopping/Category_select?Category_ID=3">家電</a></li>
-					<li><a href="/ocs_shopping/Category_select?Category_ID=1">ゲーム</a></li>
-
-				</ul>
 			</div>
 		</div>
 	</div>

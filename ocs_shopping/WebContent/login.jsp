@@ -27,7 +27,6 @@
 	</div>
 	<div id="outer2">
 	<br>
-			<a href="account_entry1.jsp"><a1><u>新規作成はこちら</u></a1></a>
 		<form action="Login_check" method="post">
 			<div id="formWrapper">
 				<div id="form">
@@ -54,6 +53,10 @@
 						<center>
 						<br>
 							<input type="submit" value="login">
+						</center>
+						<br>
+						<center>
+						<a href="account_entry1.jsp"><a1><u>新規作成はこちら</u></a1></a>
 						</center>
 					</div>
 				</div>

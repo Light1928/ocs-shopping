@@ -34,19 +34,22 @@
 		</div>
 	</div>
 	<div id="outer2">
-		<br> <font size="4" color="#000000"> ようこそ、<%=name%>さん
-		</font>
-		</td>
+		<div id="left">
+			<div class="left-title">カテゴリー</div>
+			<div class="link">
+				<ul>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=2">書籍</a></li>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=3">家電</a></li>
+					<li><a href="/ocs_shopping/Category_select?Category_ID=1">ゲーム</a></li>
+				</ul>
+			</div>
+		</div>
 		<div id="outer">
 			<div id="inner">
 				<button class="button" type="button"
 					onclick="location.href='./logout.jsp'">ログアウト</button>
 				<button class="button" type="button"
 					onclick="location.href='./setsumeisyo.jsp'">説明書</button>
-				<button class="button" type="button"
-					onclick="location.href='./kategoribetsu.jsp'">何かしら</button>
-				<button class="button" type="button"
-					onclick="location.href='./account_change.jsp'">アカウント設定</button>
 				<form style="display: inline" action=CartSelect method="post">
 					<button class="button" type="submit">カート</button>
 				</form>
@@ -98,17 +101,6 @@
 						PLAYSTATION4
 					</p>
 				</div> -->
-				</div>
-			</div>
-			<div id="left">
-				<div class="left-title">カテゴリー</div>
-				<div class="link">
-					<ul>
-						<li><a href="home_book.jsp">書籍</a></li>
-						<li><a href="home_electronics.jsp">家電</a></li>
-						<li><a href="home_game.jsp">ゲーム</a></li>
-
-					</ul>
 				</div>
 			</div>
 		</div>

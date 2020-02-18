@@ -7,7 +7,8 @@ body {
 
 /*内容量に応じた幅でブロックを中央寄せにしたいとき*/
 #outer {
-	text-align: center;
+	position: relative;
+	top:0%; left:25%;
 }
 
 #inner {
@@ -31,10 +32,10 @@ body {
 	font-weight: bold;
 	color: #0080ff;
 	font-size: 30px;
-	top: 30%;
-	left: 44%;
+	top: 30%; left : 44%;
 	margin: 0;
 	padding: 0;
+	left: 44%;
 }
 
 #outer1 a2 {
@@ -65,13 +66,13 @@ body {
 	height: 1000px;
 }
 
+#outer2 a {
+	
+}
+
 #outer2 a1 {
-	position: absolute;
 	color: #0080ff;
 	font-size: 17px;
-	left: 1%;
-	margin: 0;
-	padding: 0;
 }
 
 /*上の色の長さ*/
@@ -147,7 +148,7 @@ c {
 /*見出しの青い部分の長さ*/
 #content {
 	float: right;
-	width: 780px;
+	width: 795px;
 }
 
 /*見出しの青い部分の位置*/
@@ -158,16 +159,18 @@ c {
 
 /*記事ページへのリンクの部分*/
 #left {
+	position: absolute;
 	color: #676767;
 	font-size: 13px;
 	width: 220px;
-	float: left;
+	top: 2%;
+	left: 1%;
 }
 
 /*検索の部分*/
 .left-title {
 	margin: 0 15px 0 20px;
-	padding: 7px 20px;
+	padding: 7px 40px;
 	font-weight: bold;
 	background-color: #E3E3E3;
 	color: #333;
@@ -227,7 +230,7 @@ button {
 	font-weight: bold;
 	/* 縦方向に10px、
 * 横方向に30pxの余白を指定 */
-	padding: 10px 75px;
+	padding: 10px 105px;
 	/* 文字色を白色に指定 */
 	color: #fff;
 	/* ボーダーをなくす */
