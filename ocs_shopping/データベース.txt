@@ -70,3 +70,20 @@ ALTER TABLE CUSTOMER MODIFY User_ID VARCHAR(10) NOT NULL;
 
 ALTER TABLE CUSTOMER MODIFY Password VARCHAR(15) NOT NULL;
 
+
+
+INSERT INTO GOODS_CATEGORY(Category_Name) VALUES("game");
+INSERT INTO GOODS_CATEGORY(Category_Name) VALUES("book");
+INSERT INTO GOODS_CATEGORY(Category_Name) VALUES("appliance");
+
+INSERT INTO GOODS(Price,Category_ID) VALUES(20000,1);
+INSERT INTO GOODS(Price,Category_ID) VALUES(20000,2);
+６までする
+
+INSERT INTO GOODS_DETAILS VALUES(1"Nintendo Switch","This is a Nintendo Swtich");
+６までする
+登録順　スイッチ、プレイステーション、FE,AP,dyson,tv
+
+
+
+
