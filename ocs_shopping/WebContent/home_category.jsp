@@ -71,9 +71,9 @@
 
 						case 2:
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=3><img src="image/book1.jpg" width="200" height="200"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=3><img src="image/book1.jpg" width="200" height="350">基本情報参考書</a><br>')
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=4><img src="image/book2.jpg" width="200" height="200"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=4><img src="image/book2.jpg" width="200" height="350"></a>')
 							break;
 
 						case 3:
