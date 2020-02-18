@@ -21,7 +21,6 @@
 <title>OCSshop</title>
 </head>
 <body>
-
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
@@ -64,9 +63,9 @@
 						switch (id) {
 						case 1:
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=1><img src="image/game1.jpg" width="200" height="200"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=1><img src="image/game1.jpg" width="200" height="200">Nintendo Switch</a><br>')
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=2><img src="image/game2.jpg" width="200" height="200"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=2><img src="image/game2.jpg" width="200" height="200">PlayStation</a>')
 
 							break;
 
@@ -74,14 +73,14 @@
 							document
 									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=3><img src="image/book1.jpg" width="200" height="350">基本情報参考書</a><br>')
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=4><img src="image/book2.jpg" width="200" height="350"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=4><img src="image/book2.jpg" width="200" height="350">応用情報参考書</a>')
 							break;
 
 						case 3:
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=5><img src="image/electronics1.jpg" width="200" height="200"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=5><img src="image/electronics1.jpg" width="200" height="200">dyson</a><br>')
 							document
-									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=6><img src="image/electronics2.jpg" width="200" height="200"></a>')
+									.write('<a href=/ocs_shopping/Goods_select?Goods_ID=6><img src="image/electronics2.jpg" width="200" height="200">TV</a>')
 							break;
 
 						}

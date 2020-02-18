@@ -54,14 +54,14 @@
 		<div id="content">
 			<div class="inner">
 				<h2>商品一覧</h2>
-				<div style="position: absolute; top: 190px;">
+				<div style="position: absolute; top: 150px;">
 					<a href=/ocs_shopping/Goods_select?Goods_ID=1> <img
 						src="image/game1.jpg" width="100" height="100\" align="middle">
 						Nintendo Switch
 					</a>
 				</div>
 				<br>
-				<div style="position: absolute; top: 310px;">
+				<div style="position: absolute; top: 280px;">
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=2> <img
 							src="image/game2.jpg" width="100" height="100\" align="middle">
@@ -70,7 +70,7 @@
 					</p>
 				</div>
 				<br>
-				<div style="position: absolute; top: 430px;">
+				<div style="position: absolute; top: 410px;">
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=3> <img
 							src="image/book1.jpg" width="100" height="100\" align="middle">
@@ -78,7 +78,7 @@
 					</p>
 				</div>
 				<br>
-				<div style="position: absolute; top: 550px;">
+				<div style="position: absolute; top: 540px;">
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=4> <img
 							src="image/book2.jpg" width="100" height="100\" align="middle">
@@ -94,7 +94,7 @@
 					</p>
 				</div>
 				<br>
-				<div style="position: absolute; top: 790px;">
+				<div style="position: absolute; top: 800px;">
 					<p>
 						<a href=/ocs_shopping/Goods_select?Goods_ID=6> <img
 							src="image/electronics2.jpg" width="100" height="100\"
