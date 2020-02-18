@@ -60,7 +60,6 @@ public class CartSelect extends HttpServlet {
 				cartRecordBean.setGoodsname(gName);
 				cartRecordBean.setPrice(price);
 				cartRecordBean.setQuantity(quantity);
-
 				cartInfoBean.addCartlist(cartRecordBean);
 
 			}
