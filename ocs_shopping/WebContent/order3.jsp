@@ -26,11 +26,12 @@
 			scope="session" />
 		<div id="outer1">
 			<div id="header1">
-				<div class="header-inner">
-					<img src="image/OCS_logo.png">
-					<a1>OCSshop</a1>
-				</div>
+			<div class="header-inner">
+				<img src="image/OCS_logo.png">
+				<a1>OCSshop</a1>
+				<a2>ようこそ、<%=name%>さん</a2>
 			</div>
+		</div>
 		</div>
 		<div id="outer2">
 			<h1>注文確認</h1>

@@ -53,10 +53,12 @@ function check(){
 	<form action="CartAdd" method="post" onSubmit="return check()">
 		<div id="outer1">
 			<div id="header1">
-				<div class="header-inner">
-					<h1>OCSshop</h1>
-				</div>
+			<div class="header-inner">
+				<img src="image/OCS_logo.png">
+				<a1>OCSshop</a1>
+				<a2>ようこそ、<%=name%>さん</a2>
 			</div>
+		</div>
 		</div>
 		<div id="outer2">
 		<br>

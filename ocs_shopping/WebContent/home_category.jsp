@@ -28,8 +28,9 @@
 	<div id="outer1">
 		<div id="header1">
 			<div class="header-inner">
-				<a href="home.jsp"><img src="image/OCS_logo.png"></a><a
-					href="home.jsp"><a1>OCSshop</a1></a>
+				<img src="image/OCS_logo.png">
+				<a1>OCSshop</a1>
+				<a2>ようこそ、<%=name%>さん</a2>
 			</div>
 		</div>
 	</div>

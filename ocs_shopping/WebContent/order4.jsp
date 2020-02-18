@@ -22,6 +22,7 @@
 			<div class="header-inner">
 				<img src="image/OCS_logo.png">
 				<a1>OCSshop</a1>
+				<a2>ようこそ、<%=name%>さん</a2>
 			</div>
 		</div>
 	</div>
