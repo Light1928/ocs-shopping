@@ -106,14 +106,14 @@
 
 					case 3:
 						document
-								.write('<img src="image/book1.jpg" width="200" height="200">')
+								.write('<img src="image/book1.jpg" width="200" height="350">')
 				<%session.setAttribute("goods_name", goods_name);
 			session.setAttribute("goods_id", goods_id);%>
 					break;
 
 					case 4:
 						document
-								.write('<img src="image/book2.jpg" width="200" height="200">')
+								.write('<img src="image/book2.jpg" width="200" height="350">')
 				<%session.setAttribute("goods_name", goods_name);
 			session.setAttribute("goods_id", goods_id);%>
 					break;
