@@ -56,7 +56,7 @@ function check(){
 			<div class="header-inner">
 				<img src="image/OCS_logo.png">
 				<a1>OCSshop</a1>
-				<a2>ようこそ、<%=name%>さん</a2>
+				<a2>ようこそ、<%=username%>さん</a2>
 			</div>
 		</div>
 		</div>

@@ -1,5 +1,15 @@
+<%@page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+	String username = null;
+	HttpSession session = request.getSession(false);
+	if (session == null) {
+		response.sendRedirect("login.jsp");
+	} else {
+		username = (String) session.getAttribute("username");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +23,7 @@
 			<div class="header-inner">
 				<img src="image/OCS_logo.png">
 				<a1>OCSshop</a1>
-				<a2>ようこそ、<%=name%>さん</a2>
+				<a2>ようこそ、<%=username%>さん</a2>
 			</div>
 		</div>
 	</div>
