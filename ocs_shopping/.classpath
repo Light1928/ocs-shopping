@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="mysql-connector-java-8.0.19.jar">
+	<classpathentry kind="lib" path="mysql-connector-java-8.0.19.jar" sourcepath="/var/folders/cc/59vd0dm14z12w1f6_gdjj7_r0000gn/T/.org.sf.feeling.decompiler1582031288925/source/mysql-connector-java-8.0.19-sources.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
